@@ -18,10 +18,11 @@
             ,   fontB = new w.FontFaceObserver( "Roboto", { weight: 700, style: 'italic', stretch: 'normal' })
             ,   fontC = new w.FontFaceObserver( "Roboto", { weight: 400, style: 'normal', stretch: 'normal' })
             ,   fontD = new w.FontFaceObserver( "Roboto", { weight: 400, style: 'italic', stretch: 'normal' })
-            ,   fontE = new w.FontFaceObserver( "Roboto", { weight: 300, style: 'normal', stretch: 'normal' });
+            ,   fontE = new w.FontFaceObserver( "Roboto", { weight: 300, style: 'normal', stretch: 'normal' })
+            ,   fontF = new w.FontFaceObserver( "Roboto", { weight: 300, style: 'italic', stretch: 'normal' });
 
             w.Promise
-                .all([ fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check() ])
+                .all([ fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check(), fontF.check() ])
                 .then(
                     function( res ){ w.document.documentElement.classList.add('loaded-fonts'); },
                     function( err ){ console.log( err ); }
@@ -31,6 +32,7 @@
     <!-- End of FontFaceObserver optimization -->
 
     <!-- Start of script tags -->
+    <script src="$$hosted_assets_prefix$$/script/lib/vendor.js"></script>
     <script src="$$hosted_assets_prefix$$/script/apollo.js"></script>
     <!-- End of script tags -->
 </body>

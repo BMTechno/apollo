@@ -3,10 +3,12 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-(function( _self ){
+(function( _self, $ ){
 
     var browser = require( './browser' );
 
-    // Detect os
-    browser.detect();
-}( this ));
+    $( function() {
+        // Detect os
+        browser.detect();
+    });
+}( this, jQuery ));

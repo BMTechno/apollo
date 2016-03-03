@@ -38,21 +38,8 @@ var dev = {
 
     /* mostly components from bower */
     vendor: {
-        mainBowerFile: {
-            options: {
-                paths: {
-                    bowerDirectory: root + '/bower_components',
-                    bowerrc: root + '/.bowerrc',
-                    bowerJson: root + '/bower.json'
-                },
-                filter: '**/*.js'
-            },
-            output: output + '/script/lib'
-        },
-        standalone: {
-            paths: input + '/script/vendor',
-            output: output + '/script/lib'
-        }
+        input: root + '/bower_components',
+        output: root + '/dist/script/lib'
     },
 
     /* de stijl */

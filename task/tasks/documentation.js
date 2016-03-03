@@ -24,18 +24,19 @@ gulp.task( 'sg', ['sg:clean'], function() {
     var s = size();
 
     return gulp.src( config.sg.input + '/**/*.tpl.html' )
-        .pipe( notify({
-            onLast: false,
-            message: function() {
-                return 'Start <%= file.relative %>'
-            }
-        }))
+        // .pipe( notify({
+        //     onLast: false,
+        //     message: function() {
+        //         return 'Start <%= file.relative %>'
+        //     }
+        // }))
         .pipe( fileInclude({
             indent: true
         }))
         .pipe( gulpRename({ extname: "" }) )
         .pipe( gulpRename({ extname: ".html" }) )
         .pipe( gulpIf(/\.html/i, gulpReplace( '$$hosted_assets_prefix$$', '') ) )
+        .pipe( s )
         .pipe( gulp.dest( config.sg.output ) )
         .pipe( notify( {
             onLast: false,
