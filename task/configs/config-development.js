@@ -75,14 +75,17 @@ var dev = {
 
     /* asset */
     asset: {
-        input: input + '/**/*.{png,jpg,svg,gif,ico,json}',
+        input: [
+            input + '/**/*.{png,jpg,svg,gif,ico,json,xml}',
+            '!' + input + '/style/font/*'
+            ],
         output: output + '/asset'
     },
 
     /* font */
     font: {
         input: input + '/style/font' + '/**/*.{eot,svg,ttf,woff,woff2,otf}',
-        output: output + '/font'
+        output: output + '/asset/font'
     }
 };
 

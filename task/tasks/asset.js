@@ -29,6 +29,8 @@ gulp.task( 'asset', function() {
 
 gulp.task( 'asset:clean', function() {
     return del( [
-        config.output
+        config.output + '/**',
+        '!' + config.output,
+        '!' + config.output + '/font/*'
     ] );
 } );

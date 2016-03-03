@@ -35,7 +35,7 @@ gulp.task( 'sg', ['sg:clean'], function() {
         }))
         .pipe( gulpRename({ extname: "" }) )
         .pipe( gulpRename({ extname: ".html" }) )
-        .pipe( gulpIf(/\.html/i, gulpReplace( '$$hosted_libs_prefix$$', '') ) )
+        .pipe( gulpIf(/\.html/i, gulpReplace( '$$hosted_assets_prefix$$', '') ) )
         .pipe( gulp.dest( config.sg.output ) )
         .pipe( notify( {
             onLast: false,
@@ -47,6 +47,8 @@ gulp.task( 'sg', ['sg:clean'], function() {
 
 gulp.task( 'sg:clean', function() {
     return del( [
-        config.sg.output
+        config.sg.output,
+        '!' + config.sg.output + '/asset',
+        '!' + config.sg.output + '/style',
     ] );
 } );

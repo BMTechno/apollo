@@ -4,6 +4,7 @@
  ** ------------------------------------------------------------------------- */
 
 var gulp       = require('gulp')
+,   del        = require('del')
 ,   config     = require('../configs/config').font
 ,   changed    = require('gulp-changed')
 ,   size       = require('gulp-size')
@@ -11,7 +12,7 @@ var gulp       = require('gulp')
 ,   gulpif     = require('gulp-if')
 ;
 
-gulp.task('font', function() {
+gulp.task('font', ['font:clean'], function() {
 
     var s = size();
 
@@ -27,3 +28,9 @@ gulp.task('font', function() {
         } ) )
     ;
 });
+
+gulp.task( 'font:clean', function() {
+    return del( [
+        config.output
+    ] );
+} );
