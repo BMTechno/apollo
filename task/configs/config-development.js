@@ -10,10 +10,8 @@ var packageConfig = require('../../package.json')
 ;
 
 var root           = '.'
-,   server         = root + '/application'
-,   client         = root + '/src'
-,   input          = client
-,   output         = root + '/public';
+,   input          = root + '/src'
+,   output         = root + '/dist';
 
 var dev = {
 
@@ -21,6 +19,15 @@ var dev = {
     packageConfig: {
         name: packageConfig.name,
         deps: Object.keys( packageConfig.devDependencies )
+    },
+
+    /* documentation */
+    sg: {
+        input: root + '/docs',
+        output: root + '/dist',
+        prefix: '$$',
+        suffix: '',
+        basepath: ''
     },
 
     /* webpack */
@@ -66,10 +73,10 @@ var dev = {
         }
     },
 
-    /* image */
-    image: {
-        input: input + '/**/*.{png,jpg,svg,gif}',
-        output: output + '/'
+    /* asset */
+    asset: {
+        input: input + '/**/*.{png,jpg,svg,gif,ico,json}',
+        output: output + '/asset'
     },
 
     /* font */

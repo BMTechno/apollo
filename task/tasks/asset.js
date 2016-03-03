@@ -1,5 +1,5 @@
 /** ------------------------------------------------------------------------- *\
- * Image
+ * Asset
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
@@ -9,9 +9,9 @@ var gulp = require( 'gulp' )
 ,   size = require( 'gulp-size' )
 ,   changed = require( 'gulp-changed' )
 ,   imagemin = require( 'gulp-imagemin' )
-,   config = require( '../configs/config' ).image;
+,   config = require( '../configs/config' ).asset;
 
-gulp.task( 'image', function() {
+gulp.task( 'asset', function() {
 
     var s = size();
 
@@ -27,7 +27,7 @@ gulp.task( 'image', function() {
         } ) );
 } );
 
-gulp.task( 'image:cleanup', function() {
+gulp.task( 'asset:clean', function() {
     return del( [
         config.output
     ] );

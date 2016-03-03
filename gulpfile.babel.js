@@ -29,8 +29,9 @@ gulp.src = function() {
 gulp.task('default', ['prepare'], function(done) {
     sequence(
         ['font'],
-        ['image'],
+        ['asset'],
         ['vendor'],
+        ['sg'],
         ['markups'],
         ['webpack'],
         ['styles'],
