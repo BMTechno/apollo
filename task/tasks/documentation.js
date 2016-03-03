@@ -51,5 +51,6 @@ gulp.task( 'sg:clean', function() {
         '!' + config.sg.output,
         '!' + config.sg.output + '/asset/**',
         '!' + config.sg.output + '/style/**',
+        '!' + config.sg.output + '/script/**'
     ] );
 } );

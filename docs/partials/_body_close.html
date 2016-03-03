@@ -23,7 +23,7 @@
             w.Promise
                 .all([ fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check() ])
                 .then(
-                    function( res ){ w.document.documentElement.classList.add('loaded-fonts'); console.log( res )},
+                    function( res ){ w.document.documentElement.classList.add('loaded-fonts'); },
                     function( err ){ console.log( err ); }
                 );
         }( this ));
@@ -31,5 +31,6 @@
     <!-- End of FontFaceObserver optimization -->
 
     <!-- Start of script tags -->
+    <script src="$$hosted_assets_prefix$$/script/apollo.js"></script>
     <!-- End of script tags -->
 </body>

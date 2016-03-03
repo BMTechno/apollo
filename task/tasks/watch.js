@@ -13,5 +13,5 @@ gulp.task( 'watch', [ 'setWatch', 'serve' ], function() {
 
     gulp.watch( config.style.input + '/**/*.scss', [ 'styles' ] );
 
-    gulp.watch( config.sg.input + '/**/*.{tpl,html}', [ 'sg' ] );
-} );
+    gulp.watch( config.sg.input + '/**/*.{html}', [ 'sg' ] );
+});
