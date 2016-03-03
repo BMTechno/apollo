@@ -47,8 +47,9 @@ gulp.task( 'sg', ['sg:clean'], function() {
 
 gulp.task( 'sg:clean', function() {
     return del( [
-        config.sg.output,
-        '!' + config.sg.output + '/asset',
-        '!' + config.sg.output + '/style',
+        config.sg.output + '/**',
+        '!' + config.sg.output,
+        '!' + config.sg.output + '/asset/**',
+        '!' + config.sg.output + '/style/**',
     ] );
 } );
