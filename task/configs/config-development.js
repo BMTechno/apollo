@@ -36,14 +36,6 @@ var dev = {
         output: output + '/script'
     },
 
-    /* views */
-    markup: {
-        view: {
-            input: [ input + '/index.html' ],
-            output: output
-        }
-    },
-
     /* mostly components from bower */
     vendor: {
         mainBowerFile: {
