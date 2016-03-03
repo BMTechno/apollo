@@ -24,12 +24,12 @@ gulp.task( 'sg', ['sg:clean'], function() {
     var s = size();
 
     return gulp.src( config.sg.input + '/**/*.tpl.html' )
-        // .pipe( notify({
-        //     onLast: false,
-        //     message: function() {
-        //         return 'Start <%= file.relative %>'
-        //     }
-        // }))
+        .pipe( notify({
+            onLast: false,
+            message: function() {
+                return 'Start <%= file.relative %>'
+            }
+        }))
         .pipe( fileInclude({
             indent: true
         }))
@@ -41,7 +41,7 @@ gulp.task( 'sg', ['sg:clean'], function() {
         .pipe( notify( {
             onLast: false,
             message: function() {
-                return 'Generated <%= file.relative %>\n' + s.prettySize;
+                return 'Generated <%= file.relative %> ' + s.prettySize;
             }
         }));
 });

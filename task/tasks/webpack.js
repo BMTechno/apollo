@@ -33,7 +33,7 @@ gulp.task( 'webpack', function() {
         .pipe( notify( {
             onLast: true,
             message: function() {
-                return 'Generated <%= file.relative %>\n' + s.prettySize;
+                return 'Generated <%= file.relative %> ' + s.prettySize;
             }
         } ) )
     ;
