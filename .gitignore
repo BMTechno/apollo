@@ -199,6 +199,7 @@ wp-content/plugins/hello.php
 ### Change below according to the project's repo
 note
 !note/structure.*
+!note/spec.*
 shots
 bin
 site

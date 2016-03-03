@@ -1,0 +1,42 @@
+{
+  "name": "apollo",
+  "description": "OLX web frontend",
+  "main": "dist/apollo.pkgd.js",
+  "authors": [
+    "rezki"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "frontend"
+  ],
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "homepage": "rezki-olx.github.io/apollo",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "transparency": "^0.11.0",
+    "jQuery": "^2.2.1",
+    "moment": "^2.11.2",
+    "accounting.js": "^0.4.1",
+    "imagesloaded": "^4.1.0",
+    "imagefill": "*"
+  },
+  "overrides": {
+    "imagesloaded": {
+      "main": "imagesloaded.pkgd.js"
+    },
+    "imagefill": {
+      "main": "js/jquery-imagefill.js"
+    }
+  }
+}

@@ -45,7 +45,6 @@ packages=(
     gulp-util
     gulp-zip
     humanize
-    jquery
     jshint-stylish
     merge-stream
     mocha
@@ -53,6 +52,7 @@ packages=(
     run-sequence
     swig
     through2
+    vinyl-paths
 )
 
 is_npm()
