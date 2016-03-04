@@ -27,9 +27,9 @@ gulp.task( 'style:modern', function() {
     return gulp.src( config.style.input + '/' + file + '.scss' )
         .pipe( sourcemaps.init() )
         .pipe( sass( config.style.options ) ).on( 'error', sass.logError )
-        .pipe( autoprefixer( {
+        .pipe( autoprefixer({
             browsers: 'last 2 versions',
-        } ) )
+        }))
         .pipe( sourcemaps.write( './maps' ) )
         .pipe( s )
         .pipe( gulp.dest( config.style.output + '/' ) )
@@ -38,22 +38,22 @@ gulp.task( 'style:modern', function() {
             message: function() {
                 return 'Generated <%= file.relative %>\n' + s.prettySize;
             }
-        } ) );
+        }));
 } );
 
 gulp.task( 'style:old', function() {
 
-    var s = size();
-    var file = 'style';
+    var s = size()
+    ,   file = 'apollo';
 
     return gulp.src( config.style.input + '/' + file + '.scss' )
         .pipe( replace( /\$old\:\s*false;/g, function( str ) {
             return str.replace( /false/, "true" );
-        } ) )
+        }))
         .pipe( sourcemaps.init() )
         .pipe( autoprefixer( {
             browsers: 'last 2 versions',
-        } ) )
+        }))
         .pipe( sass( config.style.options ) ).on( 'error', sass.logError )
         .pipe( sourcemaps.write( './maps' ) )
         .pipe( rename( file + ".ie.css" ) )
@@ -62,9 +62,9 @@ gulp.task( 'style:old', function() {
         .pipe( notify( {
             onLast: true,
             message: function() {
-                return 'Generated <%= file.relative %>\n' + s.prettySize;
+                return 'Generated <%= file.relative %>' + s.prettySize;
             }
-        } ) );
+        }));
 } );
 
 gulp.task( 'style:clean', function() {
@@ -75,7 +75,8 @@ gulp.task( 'style:clean', function() {
 
 gulp.task( 'styles', function( done ) {
     sequence(
+        [ 'style:clean' ],
         [ 'style:modern', 'style:old' ],
         done
     );
-} );
+});

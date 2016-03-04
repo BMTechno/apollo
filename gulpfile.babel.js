@@ -35,7 +35,7 @@ gulp.task('default', ['prepare'], function(done) {
         ['vendor'],
         ['sg'],
         ['webpack'],
-        /*['styles'],*/
+        ['styles'],
         ['watch'],
         done
     );
@@ -46,7 +46,6 @@ gulp.task( 'clean', function() {
         './dist/**'
     ]);
 });
-
 
 gulp.task('prepare', function(done) {
     sequence(

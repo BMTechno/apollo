@@ -1,0 +1,27 @@
+// ----------------------------------------------------------------------------\
+// Typography.
+// ----------------------------------------------------------------------------/
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$default-rhythm-border-style: solid;
+$browser-default-font-size: 16px;
+$round-to-nearest-half-line: false;
+$min-line-padding: 2px !default;
+
+@if ($old == false) {
+  $font-unit: 1rem;
+}
+@else {
+  $font-unit: 16px;
+}
+
+$base-rhythm-unit: $base-line-height / $base-font-size * $font-unit;
+$base-leader: ($base-line-height - $base-font-size) * $font-unit / $base-font-size;
+$base-half-leader: $base-leader / 2;
+
+// ----------------------------------------------------------------------------\
+// Breakpoints.
+// ----------------------------------------------------------------------------/
+
+$point-1: 767px; // iPad 3 width

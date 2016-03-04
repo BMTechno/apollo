@@ -1,0 +1,32 @@
+$ff-sans: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-serif: Georgia, "Times New Roman", Times, serif !default;
+$ff-mono: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$ff-font-icon: FontAwesome;
+
+@mixin ff-sans-preload() {
+    font-family: 'Helvetica Neue', 'Helvetica', Arial;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@mixin ff-sans-medium() {
+    font-family: $ff-sans;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@mixin ff-sans-light() {
+    font-family: $ff-sans;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@mixin ff-sans-ultra-light() {
+    font-family: $ff-sans;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+}
