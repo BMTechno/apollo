@@ -41,6 +41,19 @@ gulp.task('default', ['prepare'], function(done) {
     );
 });
 
+gulp.task('mobile', ['prepare'], function(done) {
+    sequence(
+        ['asset'],
+        ['font'],
+        ['vendor'],
+        ['sg'],
+        ['webpack'],
+        ['styles'],
+        ['watch:mobile'],
+        done
+    );
+});
+
 gulp.task( 'clean', function() {
     return del( [
         './dist/**'

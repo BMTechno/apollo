@@ -4,7 +4,9 @@
  ** ------------------------------------------------------------------------- */
 
 var gulp = require( 'gulp' )
-,   connect = require( 'gulp-connect' );
+,   connect = require( 'gulp-connect' )
+,   browserSync = require('browser-sync')
+,   reload = browserSync.reload();
 
 gulp.task('serve', () => {
     connect.server({
@@ -15,4 +17,13 @@ gulp.task('serve', () => {
 
     // gulp.src('dist/index.html')
     //   .pipe(open({uri: 'http://localhost:5000'}));
+});
+
+gulp.task('serve:mobile', () => {
+    browserSync({
+        notify: false,
+        server: {
+            baseDir: ['dist']
+        }
+    });
 });
