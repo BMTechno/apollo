@@ -1,0 +1,100 @@
+#main-search__form {
+
+    @include clearfix;
+
+    position: relative;
+    top: 1rem;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+
+    .form-group {
+
+        @include clearfix;
+
+        display: block;
+        float: left;
+        margin: 0;
+        height: 2rem;
+        width: calc( 100% - 8rem );
+        // padding-left: 1px;
+    }
+
+    .field-search {
+
+        float: left;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0.25rem 0.75rem;
+        font-size: 14px;
+        color: $white;
+        height: 2rem;
+        line-height: 2rem;
+        background-color: rgba( $search-fields-bgc, 1 );
+        border: none;
+        box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.5);
+    }
+
+    .btn-head-location {
+
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 30;
+
+        display: block;
+        float: left;
+
+        margin: 0;
+        height: 2rem;
+        width: 6rem;
+        line-height: 2rem;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        border: 0 solid transparent;
+        // letter-spacing: 0.1em;
+        @include button-size( 0, 0, 10px, 0 );
+        @include transition(all .2s ease-in-out);
+        @include button-variant( $btn-primary-color, #3bb03b, transparent );
+
+        & > span {
+            position: relative; top: 0;
+            @include media-breakpoint-down(md) {
+                top: 1px;
+            }
+        }
+    }
+
+    .btn-submit-search {
+
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 20;
+
+        margin: 0;
+        display: block;
+        float: left;
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        font-weight: 300;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        border: 0 solid transparent;
+        @include button-size( 0, .25rem, 14px, 0 );
+        @include transition(all .2s ease-in-out);
+        @include button-variant( $btn-primary-color, #3bb03b, transparent );
+    }
+}

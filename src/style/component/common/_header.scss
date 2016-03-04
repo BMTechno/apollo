@@ -1,0 +1,57 @@
+$main-header-h: 4rem;
+$logo-size: $main-header-h;
+$search-fields-bgc: #572b82;
+
+.main-header {
+    @include make-container();
+    @include make-container-max-widths();
+
+    &:before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 50vw;
+        width: 100vw;
+        height: $main-header-h;
+        @include s-translate( -50%, 0 );
+        background-color: unquote($palette-purple-500);
+    }
+
+    .header-top {
+
+        @include clearfix;
+
+        min-height: $logo-size;
+        min-width: 100%;
+        max-height: $logo-size;
+        max-width: $logo-size;
+        width: 100%;
+        height: $logo-size;
+    }
+}
+
+.main-search {
+    display: block;
+    float: left;
+    width: 100%;
+    height: $main-header-h;
+
+    padding-left: 72px;
+    margin-left: -64px;
+}
+
+#logo-header {
+    display: block;
+
+    float: left;
+
+    margin: 0;
+    padding: .5rem;
+    min-height: 100%;
+    min-width: $logo-size;
+    max-height: 100%;
+    max-width: $logo-size;
+    height: 100%;
+    width: $logo-size;
+}

@@ -1,6 +1,6 @@
 $old: false;
 
-/* ------ {{ base }} ------ */
+/* ------ {{ apollo:base v0.0.0 }} ------ */
 @import "base/setting";
 @import "base/color";
 @import "base/z";
@@ -22,12 +22,25 @@ $old: false;
 @import "vendor/sirna/mixin/sirna-animate";
 @import "vendor/sirna/mixin/sirna-rwd";
 
-/* ------ {{ base:font }} ------ */
-@import "base/font";
-
 /* ------ {{ twbs v4-alpha }} ------ */
 @import "vendor/twbs/variables";
 @import "vendor/twbs/mixins";
+
+/* ------ {{ apollo:base:font v0.0.0 }} ------ */
+@import "base/font";
+
+/* ------ {{ apollo:component v0.0.0 }} ------ */
+@import "component/common/header";
+@import "component/common/footer";
+@import "component/common/content";
+@import "component/category/home";
+@import "component/ad/listing";
+@import "component/ad/detail";
+@import "component/ad/form";
+@import "component/ad/success";
+@import "component/search/result";
+
+/* ------ {{ twbs v4-alpha }} ------ */
 @import "vendor/twbs/bootstrap-reboot";
 @import "vendor/twbs/bootstrap-grid";
 @import "vendor/twbs/bootstrap-type";
