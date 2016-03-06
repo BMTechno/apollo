@@ -1,3 +1,13 @@
+.main-search {
+    display: block;
+    float: left;
+    width: 100%;
+    height: $main-header-primary-h;
+
+    padding-left: 72px;
+    margin-left: -64px;
+}
+
 #main-search__form {
 
     @include clearfix;
@@ -36,7 +46,7 @@
         line-height: 2rem;
         background-color: rgba( $search-fields-bgc, 1 );
         border: none;
-        box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.5);
+        box-shadow: $field-shadow;
     }
 
     .btn-head-location {
@@ -60,16 +70,24 @@
         cursor: pointer;
         user-select: none;
         border: 0 solid transparent;
-        // letter-spacing: 0.1em;
+
         @include button-size( 0, 0, 10px, 0 );
         @include transition(all .2s ease-in-out);
-        @include button-variant( $btn-primary-color, #3bb03b, transparent );
+        @include button-variant( $btn-primary-color, $btn-green, transparent );
 
-        & > span {
-            position: relative; top: 0;
-            @include media-breakpoint-down(md) {
-                top: 1px;
-            }
+        & > .text {
+            position: relative;
+            top: 0;
+        }
+    }
+
+    html.chrome & .btn-head-location .text {
+        @include media-breakpoint-down(md) {
+            /**
+             * @desc specific treatment for chrome mobile
+             * @depends modernizr.js
+             */
+            top: 1px;
         }
     }
 
@@ -95,6 +113,6 @@
         border: 0 solid transparent;
         @include button-size( 0, .25rem, 14px, 0 );
         @include transition(all .2s ease-in-out);
-        @include button-variant( $btn-primary-color, #3bb03b, transparent );
+        @include button-variant( $btn-primary-color, $btn-green, transparent );
     }
 }

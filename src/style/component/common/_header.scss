@@ -1,7 +1,3 @@
-$main-header-h: 4rem;
-$logo-size: $main-header-h;
-$search-fields-bgc: #572b82;
-
 .main-header {
     @include make-container();
     @include make-container-max-widths();
@@ -17,11 +13,11 @@ $search-fields-bgc: #572b82;
         @include s-translate( -50%, 0 );
         background-color: unquote($palette-purple-500);
     }
+}
 
-    .header-top {
-
+.main-header {
+    .header__bar-primary {
         @include clearfix;
-
         min-height: $logo-size;
         min-width: 100%;
         max-height: $logo-size;
@@ -29,16 +25,28 @@ $search-fields-bgc: #572b82;
         width: 100%;
         height: $logo-size;
     }
-}
+    .header__bar-secondary {
+        @include clearfix;
+        position: relative;
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        height: $main-header-secondary-h;
+        padding: 0 0 0 ($spacer * 4);
 
-.main-search {
-    display: block;
-    float: left;
-    width: 100%;
-    height: $main-header-h;
-
-    padding-left: 72px;
-    margin-left: -64px;
+        &:before {
+            content: "";
+            z-index: 1;
+            pointer-events: none;
+            width: 100vw;
+            height: 1px;
+            background-color: rgba( $black, .15 );
+            position: absolute;
+            bottom: 0;
+            @include s-translate( -50%, 0 );
+            left: 50%;
+        }
+    }
 }
 
 #logo-header {
@@ -54,4 +62,57 @@ $search-fields-bgc: #572b82;
     max-width: $logo-size;
     height: 100%;
     width: $logo-size;
+}
+
+#header__slogan {
+    position: relative;
+    float: right;
+    max-height: $main-header-secondary-h;
+    height: $main-header-secondary-h;
+    max-width: 50%;
+    width: 50%;
+    overflow: hidden;
+    padding: 0 $spacer 0 0;
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        top: 0;
+        right: 1px;
+        background-color: rgba( $black, .15 );
+    }
+
+    .text {
+        margin: 0;
+        color: $brand-secondary;
+        font-size: 9px;
+        line-height: $main-header-secondary-h;
+        text-align: center;
+        letter-spacing: 0.1em;
+        @include media-breakpoint-up(md) {
+            text-align: right;
+        }
+    }
+}
+
+#header__secondary-action-group {
+    float: right;
+
+    .btn-login-secondary {
+        font-size: 9px;
+        line-height: 16px;
+        border: none;
+        text-transform: uppercase;
+        @include button-variant($white, transparent, transparent);
+
+        .text {
+            padding: 0 ($spacer / 4);
+        }
+
+        .icon {
+            color: $btn-green;
+        }
+    }
 }

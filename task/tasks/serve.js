@@ -14,9 +14,6 @@ gulp.task('serve', () => {
         port: 5000,
         livereload: true
     });
-
-    // gulp.src('dist/index.html')
-    //   .pipe(open({uri: 'http://localhost:5000'}));
 });
 
 gulp.task('serve:mobile', () => {
