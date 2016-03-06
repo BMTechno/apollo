@@ -25,5 +25,8 @@
 
         // HOME - Category - L1
         category.handleL1Click();
+
+        // CommonUI
+        commonUI.initStickyHeader();
     });
 }( this, jQuery ));

@@ -26,6 +26,7 @@
   "devDependencies": {
     "transparency": "^0.11.0",
     "jQuery": "^2.2.1",
+    "waypoints": "^4.0.0",
     "moment": "^2.11.2",
     "accounting.js": "^0.4.1",
     "imagesloaded": "^4.1.0",
@@ -37,6 +38,9 @@
     },
     "imagefill": {
       "main": "js/jquery-imagefill.js"
+    },
+    "waypoints": {
+      "main": "lib/jquery.waypoints.js"
     }
   }
 }

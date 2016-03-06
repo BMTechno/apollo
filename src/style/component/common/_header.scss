@@ -7,7 +7,7 @@
         z-index: -1;
         position: absolute;
         top: 0;
-        left: 50vw;
+        left: 50%;
         width: 100vw;
         height: $main-header-h;
         @include s-translate( -50%, 0 );
@@ -27,11 +27,14 @@
     }
     .header__bar-secondary {
         @include clearfix;
+        display: block;
         position: relative;
         min-width: 100%;
         max-width: 100%;
         width: 100%;
+        max-height: $main-header-secondary-h;
         height: $main-header-secondary-h;
+        overflow: hidden;
         padding: 0 0 0 ($spacer * 4);
 
         &:before {
@@ -46,6 +49,22 @@
             @include s-translate( -50%, 0 );
             left: 50%;
         }
+    }
+}
+
+.main-header.is-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: $zindex-navbar-fixed;
+
+    .header__bar-secondary {
+        // @include s-transition( max-height .3s linear );
+        display: none;
+    }
+
+    &:before {
+        height: $main-header-primary-h;
     }
 }
 
