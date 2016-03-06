@@ -2,9 +2,9 @@
     @include make-container();
     @include make-container-max-widths();
 
-    padding: 2rem 0;
+    padding: 1rem 0;
 
     &.is-top {
-        padding-top: 8rem;
+        padding-top: 7rem;
     }
 }
