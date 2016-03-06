@@ -1,0 +1,6 @@
+.main-content {
+    @include make-container();
+    @include make-container-max-widths();
+
+    padding: 2rem 0;
+}
