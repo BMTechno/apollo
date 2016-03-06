@@ -11,6 +11,7 @@
     ,   search       = require( './search' )
     ,   location     = require( './location' )
     ,   transitional = require( './transitional' )
+    ,   commonUI     = require( './common' )
     ,   mock         = require( './mock' );
 
     $( function() {
@@ -19,6 +20,10 @@
 
         // Mock API
         mock.fetchCategories( '/mock/res/categories.json' )
-            .then( mock.renderCategories );
+            .then( mock.renderCategories )
+            .then( commonUI.removePreloading );
+
+        // HOME - Category - L1
+        category.handleL1Click();
     });
 }( this, jQuery ));
