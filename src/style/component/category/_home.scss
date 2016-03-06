@@ -20,9 +20,7 @@ $cat-l1-unit: 6rem;
 
 .cat-l1-row {
     @include make-row();
-    @include media-breakpoint-down(sm) {
-        margin: 0;
-    }
+    margin: 0 0 1rem 0;
 }
 
 .cat-l1 {
