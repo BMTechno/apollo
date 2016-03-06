@@ -3,9 +3,10 @@
     @@include('partials/_head.html')
     @@include('partials/_body_open.html', {
         "class": {
-            "body": "ad-details"
+            "body": "ad-detail"
         }
     })
-    @@include('views/_start.html')
+    @@include('partials/_main-header.html')
+    @@include('views/ad-detail/_main-content.html')
     @@include('partials/_body_close.html')
 </html>
