@@ -14,6 +14,8 @@ gulp.task( 'watch', [ 'setWatch', 'serve' ], function() {
     gulp.watch( config.style.input + '/**/*.scss', [ 'styles' ] );
 
     gulp.watch( config.sg.input + '/**/*', [ 'sg' ] );
+
+    gulp.watch( config.asset.input + '/**/*', [ 'asset' ] );
 });
 
 gulp.task( 'watch:mobile', [ 'setWatch', 'serve:mobile' ], function() {

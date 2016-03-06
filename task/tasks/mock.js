@@ -1,7 +1,6 @@
 /** ------------------------------------------------------------------------- *\
- * Styleguide
+ * Mock
  * @author  Rezki
- * @see http://s.id/189
  ** ------------------------------------------------------------------------- */
 
 var gulp          = require( 'gulp' )
@@ -9,34 +8,25 @@ var gulp          = require( 'gulp' )
 ,   fs            = require( 'fs' )
 ,   del           = require( 'del' )
 ,   gulpIf        = require( 'gulp-if' )
-,   gulpReplace   = require( 'gulp-replace' )
-,   gulpRename   = require( 'gulp-rename' )
 ,   uglify        = require( 'gulp-uglify' )
 ,   size          = require( 'gulp-size' )
 ,   notify        = require( 'gulp-notify' )
 ,   sequence      = require( 'run-sequence' )
-,   fileInclude   = require( 'gulp-file-include' )
 ,   config        = require( '../configs/config.js' );
 
-gulp.task( 'sg', ['sg:clean'], function() {
+gulp.task( 'mock', ['mock:clean'], function() {
 
     var s = size();
 
-    return gulp.src( config.sg.input + '/**/*.tpl.html' )
+    return gulp.src( config.mock.input + '/**/*.json' )
         .pipe( notify({
             onLast: false,
             message: function() {
                 return 'Start <%= file.relative %>'
             }
         }))
-        .pipe( fileInclude({
-            indent: true
-        }))
-        .pipe( gulpRename({ extname: "" }) )
-        .pipe( gulpRename({ extname: ".html" }) )
-        .pipe( gulpIf(/\.html/i, gulpReplace( '$$hosted_assets_prefix$$', '') ) )
         .pipe( s )
-        .pipe( gulp.dest( config.sg.output ) )
+        .pipe( gulp.dest( config.mock.output ) )
         .pipe( notify( {
             onLast: false,
             message: function() {
@@ -45,13 +35,8 @@ gulp.task( 'sg', ['sg:clean'], function() {
         }));
 });
 
-gulp.task( 'sg:clean', function() {
+gulp.task( 'mock:clean', function() {
     return del( [
-        config.sg.output + '/**',
-        '!' + config.sg.output,
-        '!' + config.sg.output + '/asset/**',
-        '!' + config.sg.output + '/style/**',
-        '!' + config.sg.output + '/script/**',
-        '!' + config.sg.output + '/mock/**'
+        config.sg.mock + '/**/*.json'
     ] );
 } );

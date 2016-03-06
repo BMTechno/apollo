@@ -30,6 +30,12 @@ var dev = {
         basepath: ''
     },
 
+    /* mock */
+    mock: {
+        input: root + '/docs',
+        output: root + '/dist',
+    },
+
     /* webpack */
     webpack: {
         input: input + '/script',

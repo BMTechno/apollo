@@ -46,6 +46,7 @@ gulp.task('mobile', ['prepare'], function(done) {
         ['asset'],
         ['font'],
         ['vendor'],
+        ['mock'],
         ['sg'],
         ['webpack'],
         ['styles'],
