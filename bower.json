@@ -26,21 +26,26 @@
   "devDependencies": {
     "transparency": "^0.11.0",
     "jQuery": "^2.2.1",
-    "waypoints": "^4.0.0",
     "moment": "^2.11.2",
     "accounting.js": "^0.4.1",
     "imagesloaded": "^4.1.0",
-    "imagefill": "*"
+    "imagefill": "*",
+    "jquery.keep-ratio": "keep-ratio#^0.1.1",
+    "waypoints": "^4.0.0"
   },
   "overrides": {
     "imagesloaded": {
-      "main": "imagesloaded.pkgd.js"
+        "main": "imagesloaded.pkgd.js"
     },
     "imagefill": {
-      "main": "js/jquery-imagefill.js"
+        "main": "js/jquery-imagefill.js"
     },
     "waypoints": {
-      "main": "lib/jquery.waypoints.js"
+        "main": "lib/jquery.waypoints.js"
+    },
+    "jquery.keep-ratio": {
+        "main": "dist/jquery.keep-ratio.js",
+        "dependencies": {}
     }
   }
 }

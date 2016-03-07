@@ -3,6 +3,26 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
+accounting.settings = {
+    currency: {
+        symbol : "Rp",
+        format: "%s%v",
+        decimal : ",",
+        thousand: ".",
+        precision : 0
+    },
+    number: {
+        precision : 0,
+        thousand: ".",
+        decimal : ","
+    }
+};
+accounting.settings.currency.format = {
+    pos : "%s %v",
+    neg : "-%s %v",
+    zero: "%s  0"
+};
+
 (function( _self, $ ){
 
     var browser      = require( './browser' )
@@ -23,10 +43,19 @@
             .then( mock.renderCategories )
             .then( commonUI.removePreloading );
 
+        mock.fetchListing( 'http://localhost:3004/adverts' )
+            .then( mock.renderListing )
+            .then( function( res ) {
+                var $imgTargets = $(res).find('.listing__image-group');
+                commonUI.imageFillW( $imgTargets );
+            });
+
         // HOME - Category - L1
         category.handleL1Click();
 
         // CommonUI
         commonUI.initStickyHeader();
+        commonUI.keepListingAspectRatio();
     });
+
 }( this, jQuery ));

@@ -5,6 +5,8 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
+var commonUI = require( '../common' );
+
 var Mock = {};
 
 Mock.fetchCategories = function( url ) {
@@ -55,5 +57,49 @@ Mock.renderCategories = function( res ) {
 
     return defer.promise();
 };
+
+Mock.fetchListing = function( url ) {
+    var defer = $.Deferred();
+
+    var reqListing = $.ajax({ url: url, dataType: 'json' });
+
+    reqListing.done( function( res ) { defer.resolve( res );});
+    reqListing.fail( function( req, status, err ) { defer.reject(); });
+
+    return defer.promise();
+}
+
+Mock.renderListing = function( res ) {
+    var rendered
+    ,   defer = $.Deferred();
+
+    var _advert = {
+        js_ad_title: {
+            html: function( params ) { return this.ad_name; }
+        },
+        js_ad_img_feat: {
+            src: function( params ) { return this.ad_img_featured.url; },
+            alt: function( params ) { return this.ad_img_featured.alt; }
+        },
+        js_ad_listing_meta_city: {
+            html: function( params ) { return this.ad_city; },
+        },
+        js_ad_listing_meta_timeago: {
+            html: function( params ) { return moment( this.ad_posted ).fromNow(); },
+        },
+        js_ad_listing_prz: {
+            html: function( params ) { return accounting.formatMoney( this.ad_price ); },
+        },
+        js_ad_listing_price_nego: {
+            html: function( params ) { return ( this.ad_price_negotiable > 0 ) ? 'NEGO' : ''; }
+        }
+    };
+
+    rendered = Transparency.render( $('#js-ad-listing-group')[0], res, _advert );
+
+    defer.resolve( rendered );
+
+    return defer.promise();
+}
 
 module.exports = Mock;
