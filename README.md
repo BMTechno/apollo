@@ -12,7 +12,7 @@ bower install
 gulp mobile
 
 on your mobile go to url shown on cli + '/home.html'
-![alt text](/src/image/readme/001.png "after gulp finish")
+![alt text](src/image/readme/001.png "after gulp finish")
 
 example:
 192.168.0.10:3000/home.html
