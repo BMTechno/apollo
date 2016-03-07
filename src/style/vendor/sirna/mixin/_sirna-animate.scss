@@ -1,0 +1,53 @@
+// example:
+// @include s-keyframe( fadeout ) {
+//     0% {
+//         opacity: 1;
+//     }
+//
+//     100% {
+//         opacity: 0;
+//     }
+// }
+
+@mixin s-keyframe ( $s_animation_name ) {
+    @-webkit-keyframes #{$s_animation_name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$s_animation_name} {
+        @content;
+    }
+
+    @-o-keyframes #{$s_animation_name} {
+        @content;
+    }
+
+    @keyframes #{$s_animation_name} {
+        @content;
+    }
+}
+
+// example:
+// @include s-animation( 10s, 5s, fadeout )
+
+@mixin s-animate ( $s_delay, $s_duration, $s_animation ) {
+    -webkit-animation-delay: $s_delay;
+    -webkit-animation-duration: $s_duration;
+    -webkit-animation-name: $s_animation;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-delay: $s_delay;
+    -moz-animation-duration: $s_duration;
+    -moz-animation-name: $s_animation;
+    -moz-animation-fill-mode: forwards;
+
+    -o-animation-delay: $s_delay;
+    -o-animation-duration: $s_duration;
+    -o-animation-name: $s_animation;
+    -o-animation-fill-mode: forwards;
+
+    animation-delay: $s_delay;
+    animation-duration: $s_duration;
+    animation-name: $s_animation;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,17 @@
+@mixin break( $point ) {
+    @media screen and ( max-width: $point ) {
+        @content;
+    }
+}
+
+@mixin orientation-landscape() {
+    @media screen and ( orientation: landscape ) {
+        @content;
+    }
+}
+
+@mixin orientation-portrait() {
+    @media screen and ( orientation: portrait ) {
+        @content;
+    }
+}

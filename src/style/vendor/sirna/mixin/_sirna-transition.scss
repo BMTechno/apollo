@@ -1,0 +1,61 @@
+// Transition mixin
+// Modified from bourbon
+// Currently dependent with auto prefixer
+// Use with caution!
+
+@function s-transition-property-names($props, $vendor: false) {
+    $new-props: ();
+    
+    @each $prop in $props {
+        $new-props: append($new-props, transition-property-name($prop, $vendor), comma);
+    }
+
+    @return $new-props;
+}
+
+@function s-transition-property-name($prop, $vendor: false) {
+    @if $vendor and $prop == transform {
+        @return unquote('-'+$vendor+'-'+$prop);
+    }
+    @else {
+        @return $prop;
+    }
+}
+
+@mixin s-transition ($properties...) {
+    @if length($properties) >= 1 {
+        -webkit-transition: $properties;
+        -moz-transition: $properties;
+        -ms-transition: $properties;
+        -o-transition: $properties;
+        transition: $properties;
+    }
+
+    @else {
+        $properties: all 0.15s ease-out 0s;
+        -webkit-transition: $properties;
+        -moz-transition: $properties;
+        -ms-transition: $properties;
+        -o-transition: $properties;
+        transition: $properties;
+    }
+}
+
+@mixin s-transition-property ($properties...) {
+   -webkit-transition-property: transition-property-names($properties, 'webkit');
+      -moz-transition-property: transition-property-names($properties, 'moz');
+           transition-property: transition-property-names($properties, false);
+}
+
+@mixin s-transition-duration ($times...) {
+    transition-duration: $times;
+}
+
+// @arg $motions: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+@mixin s-transition-timing-function ($motions...) {
+    transition-timing-function: $motions
+}
+
+@mixin s-transition-delay ($times...) {
+    transition-delay: $times
+}

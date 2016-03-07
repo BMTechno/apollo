@@ -113,7 +113,6 @@ hs_err_pid*
 
 
 ### Laravel ###
-vendor/
 node_modules/
 
 # Laravel 4 specific

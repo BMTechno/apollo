@@ -1,0 +1,13 @@
+@mixin s-registration-icon( $content ) {
+    &:before {
+        content: "#{$content}";
+        font-family: 'FontAwesome';
+        font-style: normal;;
+        font-size: inherit;
+        line-height: inherit;
+        display: block;
+        height: 100%;
+        position: absolute;
+        bottom: 4px;
+    }
+}

@@ -1,0 +1,55 @@
+@mixin s-transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// rotate
+@mixin s-rotate ($deg) {
+    @include s-transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin s-scale($scale) {
+    @include s-transform(scale($scale));
+}
+
+// translate
+@mixin s-translate ($x, $y) {
+    @include s-transform(translate($x, $y));
+}
+
+// translate X
+@mixin s-translate-x ($x) {
+    @include s-transform(translateX( $x ));
+}
+
+// translate Y
+@mixin s-translate-y ($x) {
+    @include s-transform(translateY( $y ));
+}
+
+// skew
+@mixin s-skew ($x, $y) {
+    @include s-transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin s-flip() {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+//transform origin
+@mixin s-transform-origin ( $origin ) {
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}

@@ -56,7 +56,7 @@ accounting.settings.currency.format = {
         category.handleL1Click();
 
         // CommonUI
-        commonUI.initStickyHeader();
+        // commonUI.initStickyHeader();
         commonUI.keepListingAspectRatio();
         commonUI.keepDetailAspectRatio();
     });

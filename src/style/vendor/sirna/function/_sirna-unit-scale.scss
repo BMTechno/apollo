@@ -1,0 +1,26 @@
+// -------------------------------------------------------------------------- *//
+// Unit scale function for better typographical system
+//
+// @author Rezki
+// @version 1.3.0
+// @depends _sirna-parseInt.scss
+//
+// Proprietary 2015.
+// -------------------------------------------------------------------------- *//
+
+@function x($values, $line-height: 24px, $pixel-base: 16px, $multipleBy: 1 ) {
+
+    $list: ();
+
+    @each $value in $values {
+        @if ($old) {
+            $list: append( $list, ( $value * $line-height * $multipleBy ) );
+        }
+
+        @else {
+            $list: append( $list, $multipleBy * ( $value * parseInt($line-height) / parseInt($pixel-base) ) * 1rem );
+        }
+    }
+
+    @return $list();
+}

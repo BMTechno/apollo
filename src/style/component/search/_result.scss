@@ -72,7 +72,7 @@
 
         @include button-size( 0, 0, 10px, 0 );
         @include transition(all .2s ease-in-out);
-        @include button-variant( $btn-primary-color, $btn-green, transparent );
+        @include button-variant( $btn-primary-color, $btn-purple, transparent );
 
         & > .text {
             position: relative;
@@ -112,6 +112,6 @@
         border: 0 solid transparent;
         @include button-size( 0, .25rem, 14px, 0 );
         @include transition(all .2s ease-in-out);
-        @include button-variant( $btn-primary-color, $btn-green, transparent );
+        @include button-variant( $btn-primary-color, $btn-purple, transparent );
     }
 }

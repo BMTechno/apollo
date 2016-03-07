@@ -1,0 +1,49 @@
+// -------------------------------------------------------------------------- *//
+// rem to px conversion, with pixel fallback for older browser.
+// Modified from the original source:
+// http://davidwalsh.name/rem-px-browser-function-sass
+//
+// @author Rezki
+// @version 1.3.0
+// @depends _sirna-parseInt.scss
+//
+// Proprietary 2015.
+// -------------------------------------------------------------------------- *//
+
+@function r($values, $pixel-base: 16px){
+
+      $list: ();
+
+      @each $value in $values {
+
+            $unit : unit($value);
+            $val  : parseInt($value);
+
+            @if ($old) {
+                  @if ($unit == 'rem') or ($unit == '') {
+                        $list: append($list, ($val * $pixel-base));
+                  }
+
+                  @else if($unit == 'px') {
+                        $list: append($list, $value);
+                  }
+
+                  @else {
+                        @warn 'There is no unit conversion for #{$unit}';
+                  }
+            }
+
+            @else {
+                  @if ($unit == '') {
+                        $list: append($list, ($val * $pixel-base));
+                  }
+                  @else {
+                        $list: append($list, $value);
+                  }
+            }
+      }
+
+      @return $list();
+}
+
+
