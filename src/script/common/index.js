@@ -24,8 +24,11 @@ CommonUI.initStickyHeader = function() {
 };
 
 CommonUI.keepListingAspectRatio = function() {
-    console.log( $('.ad-listing') );
     $('.listing__image-group').keepRatio({ ratio: 1, calculate: 'height' });
+};
+
+CommonUI.keepDetailAspectRatio = function() {
+    $('.detail-gallery_group').keepRatio({ ratio: 4/3, calculate: 'height' });
 };
 
 CommonUI.formatCurrency = function( $el ) {

@@ -1,0 +1,103 @@
+.ad-detail__row {
+    @include make-row();
+    margin: 0 0 1rem 0;
+}
+
+.detail-primary {
+
+    position: relative;
+    min-height: 100vh;
+    margin: 8px 0;
+}
+
+.detail-secondary {
+    @include make-col( 1, 1 );
+
+    @include media-breakpoint-up(md) {
+        @include make-col( 1, 4 );
+    }
+
+    position: relative;
+    min-height: 100vh;
+    margin: 8px 0;
+}
+
+.detail-title__group,
+.detail-desc__group {
+    @include media-breakpoint-down(md) {
+        padding: 0 .5rem;
+    }
+}
+
+.detail-gallery_group {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0 0 1rem 0;
+
+    .detail-img {
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+}
+
+
+.group-title {
+
+    background-color: unquote($palette-gray-800);
+    height: 3rem;
+    margin: 0 0 1rem 0;
+    padding: .5rem;
+
+    .text {
+        color: $white;
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 0;
+        height: 2rem;
+        line-height: 2rem;
+    }
+}
+
+.detail-content {
+
+    @include clearfix;
+
+    & > *[class^="detail-"] {
+        @include clearfix;
+        margin: .5rem;
+    }
+
+    .label, .val {
+        font-size: 14px;
+        line-height: 1.5rem;
+        margin: 0;
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 0 .5rem;
+    }
+
+    .label {
+        text-align: right;
+    }
+    .val {
+        text-align: left;
+    }
+}
+
+.detail-contact {
+    text-align: center;
+}
+
+
+.detail-seller-meta__group {
+    @include clearfix;
+    position: relative;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.5rem;
+}

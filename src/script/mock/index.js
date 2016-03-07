@@ -102,4 +102,75 @@ Mock.renderListing = function( res ) {
     return defer.promise();
 }
 
+Mock.fetchDetail = function( url ) {
+    var defer = $.Deferred();
+
+    var reqListing = $.ajax({ url: url, dataType: 'json' });
+
+    reqListing.done( function( res ) { defer.resolve( res );});
+    reqListing.fail( function( req, status, err ) { defer.reject(); });
+
+    return defer.promise();
+}
+
+Mock.renderDetail = function( res ) {
+    var rendered
+    ,   defer = $.Deferred();
+
+    var _advert = {
+        js_ad_title: {
+            html: function( params ) { return this.ad_name; }
+        },
+        js_ad_detail_gallery: {
+            src: function( params ) { return this.ad_img_featured.url; },
+            alt: function( params ) { return this.ad_img_featured.alt; }
+        },
+        js_ad_listing_meta_city: {
+            html: function( params ) { return this.ad_city; },
+        },
+        js_ad_listing_meta_timeago: {
+            html: function( params ) { return moment( this.ad_posted ).fromNow(); },
+        },
+        js_ad_listing_prz: {
+            html: function( params ) { return accounting.formatMoney( this.ad_price ); },
+        },
+        js_ad_listing_price_nego: {
+            html: function( params ) { return ( this.ad_price_negotiable > 0 ) ? 'NEGO' : ''; }
+        },
+        js_ad_condition: {
+            html: function( params ) { return ( this.ad_condition > 0 ) ? 'BARU' : 'BEKAS'; }
+        },
+        ad_verified: {
+            class: function( params ) { return ( this.ad_verified > 0 ) ? 'is-verified-seller' : ''; }
+        },
+        ad_id: {
+            html: function( params ) { return this.ad_id; }
+        },
+        ad_seller_name: {
+            html: function( params ) { return this.seller_name; }
+        },
+        ad_seller_contact: {
+            html: function( params ) { return this.seller_contact; }
+        },
+        ad_location: {
+            html: function( params ) { return this.ad_city; }
+        },
+        ad_seller_last_location: {
+            hmtl: function( params ) { return this.ac_city; }
+        },
+        seller_last_login: {
+            hmtl: function( params ) { return moment( this.seller_last_login ).fromNow(); }
+        },
+        seller_registered: {
+            hmtl: function( params ) { return moment( this.seller_registered ).fromNow(); }
+        }
+    };
+
+    rendered = Transparency.render( $('#js-ad-detail-group')[0], res, _advert );
+
+    defer.resolve( rendered );
+
+    return defer.promise();
+}
+
 module.exports = Mock;

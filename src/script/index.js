@@ -49,6 +49,8 @@ accounting.settings.currency.format = {
                 var $imgTargets = $(res).find('.listing__image-group');
                 commonUI.imageFillW( $imgTargets );
             });
+        mock.fetchDetail( 'http://localhost:3004/adverts/1' )
+            .then( mock.renderDetail );
 
         // HOME - Category - L1
         category.handleL1Click();
@@ -56,6 +58,7 @@ accounting.settings.currency.format = {
         // CommonUI
         commonUI.initStickyHeader();
         commonUI.keepListingAspectRatio();
+        commonUI.keepDetailAspectRatio();
     });
 
 }( this, jQuery ));
