@@ -1,21 +1,18 @@
 APOLLO
 ---
 
-quick note:
+Early initiative for Static UI Library
 
-```
-cd to-project-dir
-npm i -g json-server
-json-server ./api-mock.js --port 3004
-npm i
-bower install
-gulp mobile
-```
+TODO
+---
 
-on your mobile go to url shown on cli + '/home.html'
-![alt text](src/image/readme/001.png "after gulp finish")
-
-example:
-```
-192.168.0.10:3000/home.html
-```
+|                 Story                  |      Difficulty      |    Due     | Issue |
+|----------------------------------------|----------------------|------------|-------|
+| Revert color pallete                   | :beer:               | Thu Mar 10 |       |
+| Implement CTA.js for Modal Popup       | :beer:               | Thu Mar 10 |       |
+| Make gh-page for documentation         | :beer: :beer:        | Thu Mar 10 |       |
+| Remove json-server as mockup api       | :beer: :beer: :beer: | Thu Mar 10 |       |
+| Insert test spec id into documentation | :beer: :beer:        | Thu Mar 10 |       |
+| Remove dependency for jQuery           | :beer: :beer: :beer: | Thu Mar 10 |       |
+| Remove dependency for accounting.js    | :beer:               | Thu Mar 10 |       |
+| Remove dependency for moment.js        | :beer:               | Thu Mar 10 |       |

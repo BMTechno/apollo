@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="svg_ic_properti" viewBox="0 0 176 176">
+  <defs>
+    <style>
+      .ic_fg { fill: #FFF; }
+      .ic_bg { fill: transparent; }
+    </style>
+  </defs>
+  <circle class="ic_bg" cx="88" cy="88" r="88"/>
+  <path class="ic_fg" d="M43.952 80.986V140h88.094V80.767L88.118 41.633zM60 116h-8v-8h8v8zm0-12h-8v-8h8v8zm11.83 12H64v-8h7.83v8zm.17-12h-8v-8h8v8zm44-7.96h8V104h-8v-7.96zm0 11.96h8v8h-8v-8zm-12-11.96h8V104h-8v-7.96zm0 11.96h8v8h-8v-8zm-4 28H76V88h24v48zm26.41-77.78V38.85h-11.26v9.343L88 24 24 81.02h15.5l.323-.283L88 37.814l47 41.88 1.577 1.327H152z"/>
+</svg>

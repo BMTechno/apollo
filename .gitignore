@@ -199,6 +199,7 @@ wp-content/plugins/hello.php
 note
 !note/structure.*
 !note/spec.*
+!note/TODO.*
 shots
 bin
 site
@@ -206,7 +207,7 @@ site
 gulp-cache
 docs/out
 .publish
-dist
+# dist
 .drone.sec.yml
 db-*.json
 

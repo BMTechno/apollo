@@ -1,0 +1,70 @@
+{
+  "adverts": [
+    {
+      "id": 0,
+      "guid": "a4b8453d-a913-45a2-bbfb-53d3b4cfdd87",
+      "ad_id": "5107250293390",
+      "ad_name": "Handcrafted Handcrafted Steel Hat",
+      "ad_price": 67187000,
+      "ad_price_negotiable": 0,
+      "ad_created": 1442586987966,
+      "ad_posted": 1436554988438,
+      "ad_region": "Malajzia",
+      "ad_city": "Trevor borough",
+      "ad_condition": 1,
+      "ad_verified": 1,
+      "ad_img_featured": {
+        "url": "/asset/image/sample/ad/sample-image-12.jpg",
+        "alt": "Featured Image"
+      },
+      "ad_img_gallery": [
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/8",
+          "alt": "Kitten 8"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/4",
+          "alt": "Kitten 4"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/6",
+          "alt": "Kitten 6"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/10",
+          "alt": "Kitten 10"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/9",
+          "alt": "Kitten 9"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/2",
+          "alt": "Kitten 2"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/1",
+          "alt": "Kitten 1"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/7",
+          "alt": "Kitten 7"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/5",
+          "alt": "Kitten 5"
+        },
+        {
+          "url": "http://lorempixel.com/g/640/640/cats/3",
+          "alt": "Kitten 3"
+        }
+      ],
+      "seller_name": "Rempel s.r.o.",
+      "seller_contact": "0968 476 279",
+      "seller_last_location": "Macedónsko",
+      "seller_last_login": 1426718188367,
+      "seller_registered": 1434712224786,
+      "seller_verified": 1
+    }
+  ]
+}

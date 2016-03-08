@@ -1,7 +1,7 @@
 {
   "name": "apollo",
-  "description": "OLX web frontend",
-  "main": "dist/apollo.pkgd.js",
+  "description": "OLX UI Language",
+  "main": ["dist/apollo.js", "style/apollo.css", "style/apollo.ie.css"],
   "authors": [
     "rezki"
   ],

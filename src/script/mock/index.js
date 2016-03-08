@@ -63,7 +63,7 @@ Mock.fetchListing = function( url ) {
 
     var reqListing = $.ajax({ url: url, dataType: 'json' });
 
-    reqListing.done( function( res ) { defer.resolve( res );});
+    reqListing.done( function( res ) { defer.resolve( res ); console.log( res ) });
     reqListing.fail( function( req, status, err ) { defer.reject(); });
 
     return defer.promise();
