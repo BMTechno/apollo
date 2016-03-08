@@ -9,6 +9,7 @@ var gulp = require( 'gulp' )
 ,   size = require( 'gulp-size' )
 ,   changed = require( 'gulp-changed' )
 ,   imagemin = require( 'gulp-imagemin' )
+,   argv = require( 'yargs' ).argv
 ,   config = require( '../configs/config' ).asset;
 
 gulp.task( 'asset', function() {
@@ -28,6 +29,7 @@ gulp.task( 'asset', function() {
 } );
 
 gulp.task( 'asset:clean', function() {
+
     return del( [
         config.output + '/**',
         '!' + config.output,

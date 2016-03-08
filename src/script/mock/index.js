@@ -32,7 +32,7 @@ Mock.renderCategories = function( res ) {
 
     var _categories = {
         js_catsvg: {
-            src: function( params ) { return '/asset/image/categories/ic_' + this.code + '.svg'; }
+            src: function( params ) { return 'asset/image/categories/ic_' + this.code + '.svg'; }
         },
         js_cathash: {
             href: function( params ) { return '#catitem__' + this.code; },

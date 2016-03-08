@@ -9,6 +9,7 @@ var gulp       = require('gulp')
 ,   changed    = require('gulp-changed')
 ,   size       = require('gulp-size')
 ,   notify     = require('gulp-notify')
+,   argv       = require('yargs').argv
 ,   gulpif     = require('gulp-if')
 ;
 
@@ -30,6 +31,7 @@ gulp.task('font', ['font:clean'], function() {
 });
 
 gulp.task( 'font:clean', function() {
+
     return del( [
         config.output
     ] );

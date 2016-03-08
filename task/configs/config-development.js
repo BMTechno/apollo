@@ -3,15 +3,16 @@
  * @author  Rezki
  ** ------------------------------------------------------------------------- */
 
-var path = require( 'path' );
+var path = require( 'path' )
+,   argv = require( 'yargs' ).argv;
 
 var packageConfig = require('../../package.json')
 ,   webpackConfig = require('../../webpack.config.js')
 ;
 
-var root           = '.'
-,   input          = root + '/src'
-,   output         = root + '/dist';
+var root   = '.'
+,   input  = root + '/src'
+,   output = root + '/dist';
 
 var dev = {
 
@@ -27,7 +28,8 @@ var dev = {
         output: root + '/dist',
         prefix: '$$',
         suffix: '',
-        basepath: ''
+        basepath: '',
+        assetpath: 'asset'
     },
 
     /* mock */
@@ -63,7 +65,7 @@ var dev = {
         input: [
             input + '/**/*.{png,jpg,svg,gif,ico,json,xml}',
             '!' + input + '/style/font/*'
-            ],
+        ],
         output: output + '/asset'
     },
 
@@ -73,5 +75,10 @@ var dev = {
         output: output + '/asset/font'
     }
 };
+
+if ( argv.static ) {
+    var dev = JSON.stringify( dev ).replace('./dist', './test');
+    dev = JSON.parse(dev);
+}
 
 module.exports = dev;

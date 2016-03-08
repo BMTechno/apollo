@@ -126,11 +126,11 @@
         <!-- End of feature-detector, shiv, polyfills -->
 
         <!-- Start of stylesheet link -->
-        <link rel="stylesheet" href="style/apollo.css">
+        <link rel="stylesheet" href="asset/style/apollo.css">
         <!-- End of stylesheet link -->
     </head>
 
-    <body class="home is-preloading">
+    <body class="listing is-preloading">
 
     
         <header class="main-header">
@@ -175,33 +175,30 @@
 
         <div class="interstitial-1"><div class="inner"></div></div>
 
-        <div id="js-cat-l1-group"  class="cat-l1-row">
-
-            <div class="cat-l1">
-
-                <a href="#" class="cat-l1__item" data-bind="js_cathash">
-                    <div class="item__icon"><img class="icon__svg" data-bind="js_catsvg" src alt=""></div>
-                    <div class="item__name"><p class="name__text" data-bind="js_name_l1" ></p></div>
-                </a>
-
-                <div class="cat-l2-group" data-bind="children">
-
-                    <div class="cat-l2" >
-
-                        <a class="cat-l2__item" href="/ad-listing.html" >
-                            <div class="inner">
-                                <p class="oneweb-catitem-l2__name" data-bind="js_name_l2"></p>
-                                <div class="badge-count">
-                                    <div class="inner">
-                                        <p class="text"><span class="val" data-bind="js_num_l2"></span> <span class="label">Iklan</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+        <section id="js-ad-listing-group"  class="ad-listing__row">
+            <article class="ad-listing">
+                <header class="listing__header">
+                    <a href="/ad-detail.html" class="listing__image-group">
+                        <img class="listing__image" src="" alt="" data-bind="js_ad_img_feat">
+                    </a>
+                </header>
+                <div class="listing__body">
+                    <a href="#" class="listing__title"><h2 class="text" data-bind="js_ad_title" ></h2></a>
+                    <div class="listing__meta">
+                        <p class="text"><span class="meta-location" data-bind="js_ad_listing_meta_city"
+                        ></span><span class="meta-separator">&bull;</span><span class="meta-posted" data-bind="js_ad_listing_meta_timeago"
+                        ></span
+                        ></p>
+                    </div>
+                    <div class="listing__prz">
+                        <p class="text"
+                        ><span class="js-format-idr" data-bind="js_ad_listing_prz"></span
+                        ></p>
+                        <div class="bdg-prz"><p class="text" data-bind="js_ad_listing_price_nego"></p></div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
 
         <div class="interstitial-1"><div class="inner"></div></div>
     </section>
@@ -279,8 +276,8 @@
         <!-- End of FontFaceObserver optimization -->
 
         <!-- Start of script tags -->
-        <script src="script/lib/vendor.js"></script>
-        <script src="script/apollo.js"></script>
+        <script src="asset/script/lib/vendor.js"></script>
+        <script src="asset/script/apollo.js"></script>
         <!-- End of script tags -->
     </body>
 

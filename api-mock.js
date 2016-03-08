@@ -28,7 +28,7 @@ module.exports = function() {
                 ad_condition: faker.random.number() % 2 === 0 ? 1 : 0,
                 ad_verified: faker.random.number() % 2 === 0 ? 1 : 0,
                 ad_img_featured: {
-                    url: '/asset/image/sample/ad/sample-image-' + chance.integer({ min: 1, max: 12 }) + '.jpg',
+                    url: 'asset/image/sample/ad/sample-image-' + chance.integer({ min: 1, max: 12 }) + '.jpg',
                     alt: 'Featured Image'
                 },
                 ad_img_gallery: function() {
@@ -36,8 +36,8 @@ module.exports = function() {
 
                         _a = _.map( _a, function( n ) {
                             return {
-                                url: 'http://lorempixel.com/g/640/640/cats/' + n,
-                                alt: 'Kitten ' + n
+                                url: 'asset/image/sample/ad/sample-image-' + chance.integer({ min: 1, max: 12 }) + '.jpg',
+                                alt: 'Gallery Image'
                             };
                         });
 

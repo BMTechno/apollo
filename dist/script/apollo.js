@@ -85,7 +85,7 @@
 	        browser.detect();
 
 	        // Mock API
-	        mock.fetchCategories( '/mock/res/categories.json' )
+	        mock.fetchCategories( 'mock/res/categories.json' )
 	            .then( mock.renderCategories )
 	            .then( commonUI.removePreloading );
 
@@ -340,7 +340,7 @@
 
 	    var _categories = {
 	        js_catsvg: {
-	            src: function( params ) { return '/asset/image/categories/ic_' + this.code + '.svg'; }
+	            src: function( params ) { return 'asset/image/categories/ic_' + this.code + '.svg'; }
 	        },
 	        js_cathash: {
 	            href: function( params ) { return '#catitem__' + this.code; },

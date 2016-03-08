@@ -39,7 +39,7 @@ accounting.settings.currency.format = {
         browser.detect();
 
         // Mock API
-        mock.fetchCategories( '/mock/res/categories.json' )
+        mock.fetchCategories( 'mock/res/categories.json' )
             .then( mock.renderCategories )
             .then( commonUI.removePreloading );
 
