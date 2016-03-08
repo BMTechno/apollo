@@ -1,7 +1,7 @@
 {
   "name": "apollo",
   "description": "OLX UI Language",
-  "main": ["dist/apollo.js", "style/apollo.css", "style/apollo.ie.css"],
+  "main": ["dist/script/apollo.js", "dist/style/apollo.css", "dist/style/apollo.ie.css"],
   "authors": [
     "rezki"
   ],
@@ -14,7 +14,7 @@
     "globals",
     "node"
   ],
-  "homepage": "rezki-olx.github.io/apollo",
+  "homepage": "olxindonesia.github.io/apollo",
   "private": true,
   "ignore": [
     "**/.*",
