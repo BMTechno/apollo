@@ -79,7 +79,8 @@
 	            utilRemovePreloading: util.removePreloading
 	        },
 	        methods: {
-	            registerL1Click: category.registerL1Click
+	            registerL1Click: category.registerL1Click,
+	            keepAspectRatio: util.keepAspectRatio
 	        }
 	    };
 
@@ -219,7 +220,7 @@
 	exports.removePreloading = removePreloading;
 	exports.toggleActive = toggleActive;
 	exports.initStickyHeader = initStickyHeader;
-	exports.keepListingAspectRatio = keepListingAspectRatio;
+	exports.keepAspectRatio = keepAspectRatio;
 	exports.keepDetailAspectRatio = keepDetailAspectRatio;
 	exports.formatCurrency = formatCurrency;
 	exports.imageFillW = imageFillW;
@@ -246,8 +247,14 @@
 	    });
 	}
 
-	function keepListingAspectRatio() {
-	    $('.listing__image-group').keepRatio({ ratio: 1, calculate: 'height' });
+	function keepAspectRatio(opt) {
+
+	    var $el = $(this);
+	    if (!$el.length) return;
+
+	    $el.each(function (i) {
+	        $(this).keepRatio({ ratio: opt.ratio, calculate: opt.calculate });
+	    });
 	}
 
 	function keepDetailAspectRatio() {

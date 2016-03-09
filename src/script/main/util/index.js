@@ -22,8 +22,14 @@ export function initStickyHeader() {
     });
 }
 
-export function keepListingAspectRatio() {
-    $('.listing__image-group').keepRatio({ ratio: 1, calculate: 'height' });
+export function keepAspectRatio(opt) {
+
+    var $el = $(this);
+    if ( !$el.length ) return;
+
+    $el.each( function(i) {
+        $(this).keepRatio({ ratio: opt.ratio, calculate: opt.calculate });
+    });
 }
 
 export function keepDetailAspectRatio() {

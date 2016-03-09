@@ -16,7 +16,8 @@ import * as category from './category';
             utilRemovePreloading: util.removePreloading
         },
         methods: {
-            registerL1Click: category.registerL1Click
+            registerL1Click: category.registerL1Click,
+            keepAspectRatio: util.keepAspectRatio
         }
     };
 

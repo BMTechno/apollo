@@ -22,10 +22,17 @@ import * as mock from './mock';
         mock.init( api_ns, 'adverts', 'mock/res/adverts.json' );
         mock.init( api_ns, 'adverts/1', 'mock/res/adverts/1.json' );
 
-        // Mocking GET
+        // Mocking GET:categories
         mock.fetch( 'api/v1/categories' )
             .then( mock.renderCategories )
             .then( _handleRenderCategories );
+
+        // Mocking GET:adverts
+        mock.fetch( 'api/v1/adverts' )
+            .then( mock.renderListing )
+            .then( function(res) {
+                $('.listing__image-group').apollo('keepAspectRatio', { ratio: 1, calculate: 'height' });
+            })
 
         function _handleRenderCategories( res ) {
             $.apollo.utilRemovePreloading();

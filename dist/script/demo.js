@@ -70,8 +70,13 @@
 	        mock.init(api_ns, 'adverts', 'mock/res/adverts.json');
 	        mock.init(api_ns, 'adverts/1', 'mock/res/adverts/1.json');
 
-	        // Mocking GET
+	        // Mocking GET:categories
 	        mock.fetch('api/v1/categories').then(mock.renderCategories).then(_handleRenderCategories);
+
+	        // Mocking GET:adverts
+	        mock.fetch('api/v1/adverts').then(mock.renderListing).then(function (res) {
+	            $('.listing__image-group').apollo('keepAspectRatio', { ratio: 1, calculate: 'height' });
+	        });
 
 	        function _handleRenderCategories(res) {
 	            $.apollo.utilRemovePreloading();
@@ -99,9 +104,7 @@
 	exports.init = init;
 	exports.fetch = fetch;
 	exports.renderCategories = renderCategories;
-	exports.fetchListing = fetchListing;
 	exports.renderListing = renderListing;
-	exports.fetchDetail = fetchDetail;
 	exports.renderDetail = renderDetail;
 	/** ------------------------------------------------------------------------- *\
 	 * Mocking helper
@@ -190,21 +193,6 @@
 	    return defer.promise();
 	}
 
-	function fetchListing(url) {
-	    var defer = $.Deferred();
-
-	    var reqListing = $.ajax({ url: url, dataType: 'json' });
-
-	    reqListing.done(function (res) {
-	        defer.resolve(res);console.log(res);
-	    });
-	    reqListing.fail(function (req, status, err) {
-	        defer.reject();
-	    });
-
-	    return defer.promise();
-	}
-
 	function renderListing(res) {
 	    var rendered,
 	        defer = $.Deferred();
@@ -245,24 +233,9 @@
 	        }
 	    };
 
-	    rendered = Transparency.render($('#js-ad-listing-group')[0], res, _advert);
+	    rendered = Transparency.render($('#js-ad-listing-group')[0], res.adverts, _advert);
 
 	    defer.resolve(rendered);
-
-	    return defer.promise();
-	}
-
-	function fetchDetail(url) {
-	    var defer = $.Deferred();
-
-	    var reqListing = $.ajax({ url: url, dataType: 'json' });
-
-	    reqListing.done(function (res) {
-	        defer.resolve(res);
-	    });
-	    reqListing.fail(function (req, status, err) {
-	        defer.reject();
-	    });
 
 	    return defer.promise();
 	}

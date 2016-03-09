@@ -71,17 +71,6 @@ export function renderCategories( res ) {
     return defer.promise();
 }
 
-export function fetchListing( url ) {
-    var defer = $.Deferred();
-
-    var reqListing = $.ajax({ url: url, dataType: 'json' });
-
-    reqListing.done( function( res ) { defer.resolve( res ); console.log( res ) });
-    reqListing.fail( function( req, status, err ) { defer.reject(); });
-
-    return defer.promise();
-}
-
 export function renderListing( res ) {
     var rendered
     ,   defer = $.Deferred();
@@ -108,20 +97,9 @@ export function renderListing( res ) {
         }
     };
 
-    rendered = Transparency.render( $('#js-ad-listing-group')[0], res, _advert );
+    rendered = Transparency.render( $('#js-ad-listing-group')[0], res.adverts, _advert );
 
     defer.resolve( rendered );
-
-    return defer.promise();
-}
-
-export function fetchDetail( url ) {
-    var defer = $.Deferred();
-
-    var reqListing = $.ajax({ url: url, dataType: 'json' });
-
-    reqListing.done( function( res ) { defer.resolve( res );});
-    reqListing.fail( function( req, status, err ) { defer.reject(); });
 
     return defer.promise();
 }
