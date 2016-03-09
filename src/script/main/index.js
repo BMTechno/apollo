@@ -16,9 +16,4 @@ import * as browser from './browser';
 
     modplug( 'apollo', plugins );
 
-    $( function() {
-        // Detect os
-        $.apollo.browserDetect();
-    });
-
 } )( jQuery );

@@ -72,11 +72,6 @@
 	    };
 
 	    (0, _modplug2.default)('apollo', plugins);
-
-	    $(function () {
-	        // Detect os
-	        $.apollo.browserDetect();
-	    });
 	})(jQuery);
 
 /***/ },

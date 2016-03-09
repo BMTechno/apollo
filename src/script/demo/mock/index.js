@@ -5,23 +5,35 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-var Mock = {};
+export function init() {
+    $.mockjax(
+        {
+            url: 'api/v1/categories',
+            proxy: 'mock/res/categories.json'
+        }
+    );
+}
 
-Mock.fetchCategories = function( url ) {
+export function fetch( url ) {
 
     if ( typeof url !== 'string' || typeof $ !== 'function' ) return;
 
     var defer = $.Deferred();
 
-    var reqCategories = $.ajax({ url: url, dataType: 'json' });
+    var req = $.ajax(
+        {
+            url: url,
+            dataType: 'json'
+        }
+    );
 
-    reqCategories.done( function( res ) { defer.resolve( res ); });
-    reqCategories.fail( function( req, status, err ) { defer.reject(); });
+    req.done( function( res ) { defer.resolve( res ); });
+    req.fail( function( req, status, err ) { defer.reject(); });
 
     return defer.promise();
-};
+}
 
-Mock.renderCategories = function( res ) {
+export function renderCategories( res ) {
 
     if ( typeof Transparency !== 'object' ) return;
 
@@ -54,9 +66,9 @@ Mock.renderCategories = function( res ) {
     window.setTimeout( function() { defer.resolve( rendered ); }, 300);
 
     return defer.promise();
-};
+}
 
-Mock.fetchListing = function( url ) {
+export function fetchListing( url ) {
     var defer = $.Deferred();
 
     var reqListing = $.ajax({ url: url, dataType: 'json' });
@@ -67,7 +79,7 @@ Mock.fetchListing = function( url ) {
     return defer.promise();
 }
 
-Mock.renderListing = function( res ) {
+export function renderListing( res ) {
     var rendered
     ,   defer = $.Deferred();
 
@@ -100,7 +112,7 @@ Mock.renderListing = function( res ) {
     return defer.promise();
 }
 
-Mock.fetchDetail = function( url ) {
+export function fetchDetail( url ) {
     var defer = $.Deferred();
 
     var reqListing = $.ajax({ url: url, dataType: 'json' });
@@ -111,7 +123,7 @@ Mock.fetchDetail = function( url ) {
     return defer.promise();
 }
 
-Mock.renderDetail = function( res ) {
+export function renderDetail( res ) {
     var rendered
     ,   defer = $.Deferred();
 
@@ -170,5 +182,3 @@ Mock.renderDetail = function( res ) {
 
     return defer.promise();
 }
-
-module.exports = Mock;

@@ -3,14 +3,19 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-(function( _self, $ ){
+import * as mock from './mock';
 
-    var mock = require( './mock' )
+( ( $ ) => {
 
-    $( function() {
+    $( () => {
+        // Feature Detection
+        $.apollo.browserDetect();
+
         // Mock API
-        mock.fetchCategories( 'mock/res/categories.json' )
+        mock.init();
+
+        mock.fetch( 'api/v1/categories' )
             .then( function(res) { console.log(res); });
     });
 
-}( this, jQuery ));
+} )( jQuery );

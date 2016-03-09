@@ -36,9 +36,9 @@ function _toggleActive( $el ) {
     }
 }
 
-export function handleL1Click( selector ) {
+export function registerL1Click( selector ) {
 
-    $(document).on( 'click', selector, function(e) {
+    $(document).on( 'click.l1', selector, function(e) {
         e.preventDefault();
         _toggleActive( $(this) );
     });

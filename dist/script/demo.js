@@ -46,22 +46,29 @@
 
 	'use strict';
 
-	/** ------------------------------------------------------------------------- *\
-	 * Demo.
-	 * @author Rezki
-	 ** ------------------------------------------------------------------------- */
+	var _mock = __webpack_require__(3);
 
-	(function (_self, $) {
+	var mock = _interopRequireWildcard(_mock);
 
-	    var mock = __webpack_require__(3);
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	(function ($) {
 
 	    $(function () {
+	        // Feature Detection
+	        $.apollo.browserDetect();
+
 	        // Mock API
-	        mock.fetchCategories('mock/res/categories.json').then(function (res) {
+	        mock.init();
+
+	        mock.fetch('api/v1/categories').then(function (res) {
 	            console.log(res);
 	        });
 	    });
-	})(undefined, jQuery);
+	})(jQuery); /** ------------------------------------------------------------------------- *\
+	             * Demo.
+	             * @author Rezki
+	             ** ------------------------------------------------------------------------- */
 
 /***/ },
 /* 1 */,
@@ -71,8 +78,19 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
+	exports.init = init;
+	exports.fetch = fetch;
+	exports.renderCategories = renderCategories;
+	exports.fetchListing = fetchListing;
+	exports.renderListing = renderListing;
+	exports.fetchDetail = fetchDetail;
+	exports.renderDetail = renderDetail;
 	/** ------------------------------------------------------------------------- *\
 	 * Mocking helper
 	 * @depends jQuery
@@ -80,27 +98,35 @@
 	 * @author Rezki
 	 ** ------------------------------------------------------------------------- */
 
-	var Mock = {};
+	function init() {
+	    $.mockjax({
+	        url: 'api/v1/categories',
+	        proxy: 'mock/res/categories.json'
+	    });
+	}
 
-	Mock.fetchCategories = function (url) {
+	function fetch(url) {
 
 	    if (typeof url !== 'string' || typeof $ !== 'function') return;
 
 	    var defer = $.Deferred();
 
-	    var reqCategories = $.ajax({ url: url, dataType: 'json' });
+	    var req = $.ajax({
+	        url: url,
+	        dataType: 'json'
+	    });
 
-	    reqCategories.done(function (res) {
+	    req.done(function (res) {
 	        defer.resolve(res);
 	    });
-	    reqCategories.fail(function (req, status, err) {
+	    req.fail(function (req, status, err) {
 	        defer.reject();
 	    });
 
 	    return defer.promise();
-	};
+	}
 
-	Mock.renderCategories = function (res) {
+	function renderCategories(res) {
 
 	    if ((typeof Transparency === 'undefined' ? 'undefined' : _typeof(Transparency)) !== 'object') return;
 
@@ -147,9 +173,9 @@
 	    }, 300);
 
 	    return defer.promise();
-	};
+	}
 
-	Mock.fetchListing = function (url) {
+	function fetchListing(url) {
 	    var defer = $.Deferred();
 
 	    var reqListing = $.ajax({ url: url, dataType: 'json' });
@@ -162,9 +188,9 @@
 	    });
 
 	    return defer.promise();
-	};
+	}
 
-	Mock.renderListing = function (res) {
+	function renderListing(res) {
 	    var rendered,
 	        defer = $.Deferred();
 
@@ -209,9 +235,9 @@
 	    defer.resolve(rendered);
 
 	    return defer.promise();
-	};
+	}
 
-	Mock.fetchDetail = function (url) {
+	function fetchDetail(url) {
 	    var defer = $.Deferred();
 
 	    var reqListing = $.ajax({ url: url, dataType: 'json' });
@@ -224,9 +250,9 @@
 	    });
 
 	    return defer.promise();
-	};
+	}
 
-	Mock.renderDetail = function (res) {
+	function renderDetail(res) {
 	    var rendered,
 	        defer = $.Deferred();
 
@@ -316,9 +342,7 @@
 	    defer.resolve(rendered);
 
 	    return defer.promise();
-	};
-
-	module.exports = Mock;
+	}
 
 /***/ }
 /******/ ]);
