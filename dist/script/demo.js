@@ -74,13 +74,21 @@
 	        mock.fetch('api/v1/categories').then(mock.renderCategories).then(_handleRenderCategories);
 
 	        // Mocking GET:adverts
-	        mock.fetch('api/v1/adverts').then(mock.renderListing).then(function (res) {
-	            $('.listing__image-group').apollo('keepAspectRatio', { ratio: 1, calculate: 'height' });
-	        });
+	        mock.fetch('api/v1/adverts').then(mock.renderListing).then(_handleRenderListing);
+
+	        // Privates
+	        // --------------------------------------------------------------------
 
 	        function _handleRenderCategories(res) {
-	            $.apollo.utilRemovePreloading();
+	            $('body').apollo('utilRemovePreloading');
 	            $('.cat-l1__item').apollo('registerL1Click');
+	        }
+
+	        function _handleRenderListing(res) {
+
+	            $('.ad-listing').each(function (i) {
+	                $(this).apollo('utilRemovePreloading').find('.listing__image-group').apollo('keepAspectRatio', { ratio: 1, calculate: 'height' }).apollo('imageFillW');
+	            });
 	        }
 	    });
 	})(jQuery); /** ------------------------------------------------------------------------- *\
@@ -201,6 +209,9 @@
 	        js_ad_title: {
 	            html: function html(params) {
 	                return this.ad_name;
+	            },
+	            href: function href(params) {
+	                return 'ad-detail.html';
 	            }
 	        },
 	        js_ad_img_feat: {

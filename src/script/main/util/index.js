@@ -1,35 +1,38 @@
-export function removePreloading( selector ) {
-    selector = ( typeof selector === 'string' ) ? selector : 'body';
-    $( selector ).removeClass('is-preloading');
+export function removePreloading() {
+    var $el = $(this) || $('body');
+    if ( !$el.length ) return;
+
+    $el.removeClass('is-preloading');
+
+    return $el;
 }
 
 export function toggleActive( $el ) {
     $el.toggleClass( 'is-active' );
 }
 
-export function initStickyHeader() {
-
-    var $triggerEl = $('.header__bar-primary')
-    ,   $wrapperEl = $('.main-header, .main-content');
-
-    console.log( $triggerEl );
-
-    var waypoints = $('.header__bar-primary').waypoint({
-        handler: function(direction) {
-            if ( direction === 'down' )  $wrapperEl.addClass( 'is-top' );
-            else if ( direction === 'up' )  $wrapperEl.removeClass( 'is-top' );
-        }
-    });
-}
-
-export function keepAspectRatio(opt) {
+export function imageFillW() {
 
     var $el = $(this);
     if ( !$el.length ) return;
 
     $el.each( function(i) {
+        $(this).imagefill({
+            throttle:1000/60
+        });
+    });
+}
+
+export function keepAspectRatio(opt) {
+
+    var $el = ( $(this).length ) ? $(this) : $( '.listing__image-group' );
+    if ( !$el.length ) return;
+
+    $el.each( function(i) {
         $(this).keepRatio({ ratio: opt.ratio, calculate: opt.calculate });
     });
+
+    return $el;
 }
 
 export function keepDetailAspectRatio() {
@@ -42,16 +45,5 @@ export function formatCurrency( $el ) {
         ,   _formatted = accounting.formatMoney( _self.text() );
 
         _self.text( _formatted );
-    });
-}
-
-export function imageFillW( $el ) {
-    $el.each( function(i) {
-
-        console.log( $(this) );
-
-        $(this).imagefill({
-            throttle:1000/60
-        });
     });
 }

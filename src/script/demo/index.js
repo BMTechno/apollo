@@ -30,13 +30,25 @@ import * as mock from './mock';
         // Mocking GET:adverts
         mock.fetch( 'api/v1/adverts' )
             .then( mock.renderListing )
-            .then( function(res) {
-                $('.listing__image-group').apollo('keepAspectRatio', { ratio: 1, calculate: 'height' });
-            })
+            .then( _handleRenderListing );
+
+        // Privates
+        // --------------------------------------------------------------------
 
         function _handleRenderCategories( res ) {
-            $.apollo.utilRemovePreloading();
+            $('body').apollo( 'utilRemovePreloading' );
             $( '.cat-l1__item' ).apollo( 'registerL1Click' );
+        }
+
+        function _handleRenderListing( res ) {
+
+            $('.ad-listing').each(function(i) {
+                $(this)
+                    .apollo( 'utilRemovePreloading' )
+                    .find('.listing__image-group')
+                    .apollo( 'keepAspectRatio', { ratio: 1, calculate: 'height' } )
+                    .apollo( 'imageFillW' );
+            });
         }
     });
 

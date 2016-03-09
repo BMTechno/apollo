@@ -958,6 +958,7 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   margin-left: -0.25rem;
   margin-right: -0.25rem;
   margin: 0 0 1rem 0;
+  min-height: 100vh;
 }
 
 .ad-listing__row::after {
@@ -976,6 +977,7 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   position: relative;
   min-height: 20rem;
   margin: 8px 0;
+  display: block;
 }
 
 @media (min-width: 544px) {
@@ -998,6 +1000,10 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
     float: left;
     width: 25%;
   }
+}
+
+.ad-listing.is-preloading {
+  display: none;
 }
 
 .listing__header {

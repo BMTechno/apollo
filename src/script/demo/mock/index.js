@@ -77,7 +77,8 @@ export function renderListing( res ) {
 
     var _advert = {
         js_ad_title: {
-            html: function( params ) { return this.ad_name; }
+            html: function( params ) { return this.ad_name; },
+            href: function( params ) { return 'ad-detail.html' }
         },
         js_ad_img_feat: {
             src: function( params ) { return this.ad_img_featured.url; },

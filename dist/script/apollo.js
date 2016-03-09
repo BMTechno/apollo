@@ -75,12 +75,13 @@
 
 	    var plugins = {
 	        statics: {
-	            browserDetect: browser.detect,
-	            utilRemovePreloading: util.removePreloading
+	            browserDetect: browser.detect
 	        },
 	        methods: {
+	            utilRemovePreloading: util.removePreloading,
 	            registerL1Click: category.registerL1Click,
-	            keepAspectRatio: util.keepAspectRatio
+	            keepAspectRatio: util.keepAspectRatio,
+	            imageFillW: util.imageFillW
 	        }
 	    };
 
@@ -219,42 +220,45 @@
 	});
 	exports.removePreloading = removePreloading;
 	exports.toggleActive = toggleActive;
-	exports.initStickyHeader = initStickyHeader;
+	exports.imageFillW = imageFillW;
 	exports.keepAspectRatio = keepAspectRatio;
 	exports.keepDetailAspectRatio = keepDetailAspectRatio;
 	exports.formatCurrency = formatCurrency;
-	exports.imageFillW = imageFillW;
-	function removePreloading(selector) {
-	    selector = typeof selector === 'string' ? selector : 'body';
-	    $(selector).removeClass('is-preloading');
+	function removePreloading() {
+	    var $el = $(this) || $('body');
+	    if (!$el.length) return;
+
+	    $el.removeClass('is-preloading');
+
+	    return $el;
 	}
 
 	function toggleActive($el) {
 	    $el.toggleClass('is-active');
 	}
 
-	function initStickyHeader() {
-
-	    var $triggerEl = $('.header__bar-primary'),
-	        $wrapperEl = $('.main-header, .main-content');
-
-	    console.log($triggerEl);
-
-	    var waypoints = $('.header__bar-primary').waypoint({
-	        handler: function handler(direction) {
-	            if (direction === 'down') $wrapperEl.addClass('is-top');else if (direction === 'up') $wrapperEl.removeClass('is-top');
-	        }
-	    });
-	}
-
-	function keepAspectRatio(opt) {
+	function imageFillW() {
 
 	    var $el = $(this);
 	    if (!$el.length) return;
 
 	    $el.each(function (i) {
+	        $(this).imagefill({
+	            throttle: 1000 / 60
+	        });
+	    });
+	}
+
+	function keepAspectRatio(opt) {
+
+	    var $el = $(this).length ? $(this) : $('.listing__image-group');
+	    if (!$el.length) return;
+
+	    $el.each(function (i) {
 	        $(this).keepRatio({ ratio: opt.ratio, calculate: opt.calculate });
 	    });
+
+	    return $el;
 	}
 
 	function keepDetailAspectRatio() {
@@ -267,17 +271,6 @@
 	            _formatted = accounting.formatMoney(_self.text());
 
 	        _self.text(_formatted);
-	    });
-	}
-
-	function imageFillW($el) {
-	    $el.each(function (i) {
-
-	        console.log($(this));
-
-	        $(this).imagefill({
-	            throttle: 1000 / 60
-	        });
 	    });
 	}
 
@@ -333,7 +326,6 @@
 	function registerL1Click() {
 
 	    var $el = $(this).length ? $(this) : $('.cat-l1__item');
-
 	    if (!$el.length) return;
 
 	    $(document).on('click', $('.cat-l1__item'), function (e) {

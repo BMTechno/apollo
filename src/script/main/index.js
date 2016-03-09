@@ -13,11 +13,12 @@ import * as category from './category';
     var plugins = {
         statics: {
             browserDetect: browser.detect,
-            utilRemovePreloading: util.removePreloading
         },
         methods: {
+            utilRemovePreloading: util.removePreloading,
             registerL1Click: category.registerL1Click,
-            keepAspectRatio: util.keepAspectRatio
+            keepAspectRatio: util.keepAspectRatio,
+            imageFillW: util.imageFillW
         }
     };
 

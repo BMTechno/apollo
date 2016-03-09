@@ -43,7 +43,6 @@ function _toggleActive( $el ) {
 export function registerL1Click() {
 
     var $el = ( $(this).length ) ? $(this) : $( '.cat-l1__item' );
-
     if ( !$el.length ) return;
 
     $(document).on( 'click', $( '.cat-l1__item' ), function(e) {
