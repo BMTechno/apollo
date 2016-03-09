@@ -10,20 +10,14 @@ var path = require('path')
 var webpackConfig = {
     debug: true,
     entry: {
-        app: path.resolve( __dirname, './src/script/index.js' )
+        apollo: path.resolve( __dirname, './src/script/main/index.js' ),
+        demo: path.resolve( __dirname, './src/script/demo/index.js' )
     },
     output: {
         path: path.resolve( __dirname, './dist/script/' ),
-        filename: 'apollo.js'
+        filename: '[name].js'
     },
-    module: {
-        loaders: [
-            {
-                test: /\.scss$/,
-                loader: 'style!css!autoprefixer!sass'
-            }
-        ]
-    },
+    module: {},
     resolve: {
         alias: {}
     },

@@ -40,7 +40,10 @@ var dev = {
 
     /* webpack */
     webpack: {
-        input: input + '/script',
+        input: {
+            input: input + '/script/main',
+            demo: input + '/script/demo'
+        },
         output: output + '/script'
     },
 

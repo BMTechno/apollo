@@ -33,6 +33,7 @@ gulp.task('default', ['prepare'], function(done) {
         ['asset'],
         ['font'],
         ['vendor'],
+        ['mock'],
         ['sg'],
         ['webpack'],
         ['styles'],

@@ -5,8 +5,6 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-var commonUI = require( '../common' );
-
 var Mock = {};
 
 Mock.fetchCategories = function( url ) {

@@ -6,21 +6,22 @@
 var gulp = require( 'gulp' )
 ,   connect = require( 'gulp-connect' )
 ,   browserSync = require('browser-sync')
-,   reload = browserSync.reload();
+,   reload = browserSync.reload()
+,   argv = require( 'yargs' ).argv
 
 gulp.task('serve', () => {
-    connect.server({
-        root: 'dist',
-        port: 5000,
-        livereload: true
-    });
-});
-
-gulp.task('serve:mobile', () => {
-    browserSync({
-        notify: false,
-        server: {
-            baseDir: ['dist']
-        }
-    });
+    if ( !argv.sync ) {
+        connect.server({
+            root: 'dist',
+            port: 5005,
+            livereload: true
+        });
+    } else {
+        browserSync({
+            notify: false,
+            server: {
+                baseDir: ['dist']
+            }
+        });
+    }
 });

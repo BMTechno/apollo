@@ -1,7 +1,11 @@
 {
   "name": "apollo",
   "description": "OLX UI Language",
-  "main": ["dist/script/apollo.js", "dist/style/apollo.css", "dist/style/apollo.ie.css"],
+  "main": [
+    "dist/script/apollo.js",
+    "dist/style/apollo.css",
+    "dist/style/apollo.ie.css"
+  ],
   "authors": [
     "rezki"
   ],
@@ -26,6 +30,7 @@
   "devDependencies": {
     "transparency": "^0.11.0",
     "jQuery": "^2.2.1",
+    "jquery-mockjax": "^2.1.1",
     "moment": "^2.11.2",
     "accounting.js": "^0.4.1",
     "imagesloaded": "^4.1.0",
@@ -35,17 +40,17 @@
   },
   "overrides": {
     "imagesloaded": {
-        "main": "imagesloaded.pkgd.js"
+      "main": "imagesloaded.pkgd.js"
     },
     "imagefill": {
-        "main": "js/jquery-imagefill.js"
+      "main": "js/jquery-imagefill.js"
     },
     "waypoints": {
-        "main": "lib/jquery.waypoints.js"
+      "main": "lib/jquery.waypoints.js"
     },
     "jquery.keep-ratio": {
-        "main": "dist/jquery.keep-ratio.js",
-        "dependencies": {}
+      "main": "dist/jquery.keep-ratio.js",
+      "dependencies": {}
     }
   }
 }

@@ -15,11 +15,11 @@ var gulp = require( 'gulp' )
 ,   config = require('../configs/config.js')
 ;
 
-gulp.task( 'webpack', function() {
+gulp.task( 'webpack', ['webpack:clean'], function() {
 
     var s = size();
 
-    return gulp.src( config.webpack.input + '/index.js' )
+    return gulp.src( config.webpack.input.main + '/index.js' )
         .pipe( webpack(
             webpackConfig,
             null,
@@ -35,10 +35,12 @@ gulp.task( 'webpack', function() {
             message: function() {
                 return 'Generated <%= file.relative %> ' + s.prettySize;
             }
-        } ) )
-    ;
+        } ) );
 });
 
 gulp.task( 'webpack:clean', function() {
-    return del( [ config.webpack.output + '/' ] );
+    return del( [
+        config.webpack.output + '/apollo.js',
+        config.webpack.output + '/demo.js'
+    ] );
 });
