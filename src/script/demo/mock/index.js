@@ -47,7 +47,8 @@ export function renderCategories( res ) {
             src: function( params ) { return 'asset/image/categories/ic_' + this.code + '.svg'; }
         },
         js_cathash: {
-            href: function( params ) { return '#catitem__' + this.code; },
+            // href: function( params ) { return '#catitem__' + this.code; },
+            href: function( params ) { return '#'; },
             id: function( params ) { return 'catitem__' + this.code; }
         },
         js_name_l1: {

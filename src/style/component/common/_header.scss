@@ -11,7 +11,7 @@
         width: 100vw;
         height: $main-header-h;
         @include s-translate( -50%, 0 );
-        background-color: unquote($palette-purple-500);
+        background-color: $brand-primary;
     }
 }
 
@@ -34,7 +34,6 @@
         width: 100%;
         max-height: $main-header-secondary-h;
         height: $main-header-secondary-h;
-        overflow: hidden;
         padding: 0 0 0 ($spacer * 4);
 
         &:before {
@@ -105,7 +104,7 @@
 
     .text {
         margin: 0;
-        color: $brand-secondary;
+        color: $white;
         font-size: 9px;
         line-height: $main-header-secondary-h;
         text-align: center;
@@ -131,7 +130,7 @@
         }
 
         .icon {
-            color: $btn-green;
+            color: $palette-yellow-A400;
         }
     }
 }

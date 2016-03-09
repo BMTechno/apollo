@@ -2,20 +2,20 @@ $black:      #000;
 $white:      #FFF;
 
 $palette-red:
-"#ffffff"
-"#f2caca"
-"#e79d9d"
-"#d86464"
-"#d24b4b"
-"#cc3333"
-"#b42d2d"
-"#9b2727"
-"#832121"
-"#6a1b1b"
-"#ffffff"
-"#f2caca"
-"#d24b4b"
-"#9b2727";
+#ffffff,
+#f2caca,
+#e79d9d,
+#d86464,
+#d24b4b,
+#cc3333,
+#b42d2d,
+#9b2727,
+#832121,
+#6a1b1b,
+#ffffff,
+#f2caca,
+#d24b4b,
+#9b2727;
 
 $palette-red-50: nth($palette-red, 1);
 $palette-red-100: nth($palette-red, 2);
@@ -33,20 +33,20 @@ $palette-red-A400: nth($palette-red, 13);
 $palette-red-A700: nth($palette-red, 14);
 
 $palette-pink:
-"#ffd6eb"
-"#ff8ac4"
-"#ff52a8"
-"#ff0a85"
-"#eb0075"
-"#cc0066"
-"#ad0057"
-"#8f0047"
-"#700038"
-"#520029"
-"#ffd6eb"
-"#ff8ac4"
-"#eb0075"
-"#8f0047";
+#ffd6eb,
+#ff8ac4,
+#ff52a8,
+#ff0a85,
+#eb0075,
+#cc0066,
+#ad0057,
+#8f0047,
+#700038,
+#520029,
+#ffd6eb,
+#ff8ac4,
+#eb0075,
+#8f0047;
 
 $palette-pink-50: nth($palette-pink, 1);
 $palette-pink-100: nth($palette-pink, 2);
@@ -64,20 +64,20 @@ $palette-pink-A400: nth($palette-pink, 13);
 $palette-pink-A700: nth($palette-pink, 14);
 
 $palette-purple:
-"#ebe0f5"
-"#c4a7e2"
-"#a87dd4"
-"#8547c2"
-"#753bb0"
-"#663399"
-"#572b82"
-"#47246b"
-"#381c54"
-"#29143d"
-"#ebe0f5"
-"#c4a7e2"
-"#753bb0"
-"#47246b";
+#ebe0f5,
+#c4a7e2,
+#a87dd4,
+#8547c2,
+#753bb0,
+#663399,
+#572b82,
+#47246b,
+#381c54,
+#29143d,
+#ebe0f5,
+#c4a7e2,
+#753bb0,
+#47246b;
 
 $palette-purple-50: nth($palette-purple, 1);
 $palette-purple-100: nth($palette-purple, 2);
@@ -95,20 +95,20 @@ $palette-purple-A400: nth($palette-purple, 13);
 $palette-purple-A700: nth($palette-purple, 14);
 
 $palette-deep-purple:
-"#dcd1f0"
-"#b197de"
-"#916cd1"
-"#693bbb"
-"#5c33a3"
-"#4f2c8c"
-"#422575"
-"#351d5d"
-"#281646"
-"#1a0f2f"
-"#dcd1f0"
-"#b197de"
-"#5c33a3"
-"#351d5d";
+#dcd1f0,
+#b197de,
+#916cd1,
+#693bbb,
+#5c33a3,
+#4f2c8c,
+#422575,
+#351d5d,
+#281646,
+#1a0f2f,
+#dcd1f0,
+#b197de,
+#5c33a3,
+#351d5d;
 
 $palette-deep-purple-50: nth($palette-deep-purple, 1);
 $palette-deep-purple-100: nth($palette-deep-purple, 2);
@@ -126,20 +126,20 @@ $palette-deep-purple-A400: nth($palette-deep-purple, 13);
 $palette-deep-purple-A700: nth($palette-deep-purple, 14);
 
 $palette-indigo:
-"#e0e0f5"
-"#a7a7e2"
-"#7d7dd4"
-"#4747c2"
-"#3b3bb0"
-"#333399"
-"#2b2b82"
-"#24246b"
-"#1c1c54"
-"#14143d"
-"#e0e0f5"
-"#a7a7e2"
-"#3b3bb0"
-"#24246b";
+#e0e0f5,
+#a7a7e2,
+#7d7dd4,
+#4747c2,
+#3b3bb0,
+#333399,
+#2b2b82,
+#24246b,
+#1c1c54,
+#14143d,
+#e0e0f5,
+#a7a7e2,
+#3b3bb0,
+#24246b;
 
 $palette-indigo-50: nth($palette-indigo, 1);
 $palette-indigo-100: nth($palette-indigo, 2);
@@ -157,20 +157,20 @@ $palette-indigo-A400: nth($palette-indigo, 13);
 $palette-indigo-A700: nth($palette-indigo, 14);
 
 $palette-blue:
-"#eff7fd"
-"#acd4f4"
-"#7abaed"
-"#3c99e5"
-"#218be1"
-"#1b7bc8"
-"#176aad"
-"#145a92"
-"#104977"
-"#0c395c"
-"#eff7fd"
-"#acd4f4"
-"#218be1"
-"#145a92";
+#eff7fd,
+#acd4f4,
+#7abaed,
+#3c99e5,
+#218be1,
+#1b7bc8,
+#176aad,
+#145a92,
+#104977,
+#0c395c,
+#eff7fd,
+#acd4f4,
+#218be1,
+#145a92;
 
 $palette-blue-50: nth($palette-blue, 1);
 $palette-blue-100: nth($palette-blue, 2);
@@ -188,20 +188,20 @@ $palette-blue-A400: nth($palette-blue, 13);
 $palette-blue-A700: nth($palette-blue, 14);
 
 $palette-light-blue:
-"#d6f2ff"
-"#8adafe"
-"#52c8fd"
-"#0cb1fd"
-"#02a0e7"
-"#028bc9"
-"#0276ab"
-"#01618c"
-"#014c6e"
-"#013750"
-"#d6f2ff"
-"#8adafe"
-"#02a0e7"
-"#01618c";
+#d6f2ff,
+#8adafe,
+#52c8fd,
+#0cb1fd,
+#02a0e7,
+#028bc9,
+#0276ab,
+#01618c,
+#014c6e,
+#013750,
+#d6f2ff,
+#8adafe,
+#02a0e7,
+#01618c;
 
 $palette-light-blue-50: nth($palette-light-blue, 1);
 $palette-light-blue-100: nth($palette-light-blue, 2);
@@ -219,20 +219,20 @@ $palette-light-blue-A400: nth($palette-light-blue, 13);
 $palette-light-blue-A700: nth($palette-light-blue, 14);
 
 $palette-cyan:
-"#b3f6ff"
-"#67eeff"
-"#2fe8ff"
-"#00cce6"
-"#00b1c8"
-"#0096a9"
-"#007b8a"
-"#00606c"
-"#00444d"
-"#00292f"
-"#b3f6ff"
-"#67eeff"
-"#00b1c8"
-"#00606c";
+#b3f6ff,
+#67eeff,
+#2fe8ff,
+#00cce6,
+#00b1c8,
+#0096a9,
+#007b8a,
+#00606c,
+#00444d,
+#00292f,
+#b3f6ff,
+#67eeff,
+#00b1c8,
+#00606c;
 
 $palette-cyan-50: nth($palette-cyan, 1);
 $palette-cyan-100: nth($palette-cyan, 2);
@@ -250,20 +250,20 @@ $palette-cyan-A400: nth($palette-cyan, 13);
 $palette-cyan-A700: nth($palette-cyan, 14);
 
 $palette-teal:
-"#75fff2"
-"#29ffeb"
-"#00f0d9"
-"#00a898"
-"#008a7d"
-"#006b61"
-"#004c45"
-"#002e2a"
-"#000f0e"
-"#000000"
-"#75fff2"
-"#29ffeb"
-"#008a7d"
-"#002e2a";
+#75fff2,
+#29ffeb,
+#00f0d9,
+#00a898,
+#008a7d,
+#006b61,
+#004c45,
+#002e2a,
+#000f0e,
+#000000,
+#75fff2,
+#29ffeb,
+#008a7d,
+#002e2a;
 
 $palette-teal-50: nth($palette-teal, 1);
 $palette-teal-100: nth($palette-teal, 2);
@@ -281,20 +281,20 @@ $palette-teal-A400: nth($palette-teal, 13);
 $palette-teal-A700: nth($palette-teal, 14);
 
 $palette-green:
-"#e0f5e0"
-"#a7e2a7"
-"#7dd47d"
-"#47c247"
-"#3bb03b"
-"#339933"
-"#2b822b"
-"#246b24"
-"#1c541c"
-"#143d14"
-"#e0f5e0"
-"#a7e2a7"
-"#3bb03b"
-"#246b24";
+#e0f5e0,
+#a7e2a7,
+#7dd47d,
+#47c247,
+#3bb03b,
+#339933,
+#2b822b,
+#246b24,
+#1c541c,
+#143d14,
+#e0f5e0,
+#a7e2a7,
+#3bb03b,
+#246b24;
 
 $palette-green-50: nth($palette-green, 1);
 $palette-green-100: nth($palette-green, 2);
@@ -312,20 +312,20 @@ $palette-green-A400: nth($palette-green, 13);
 $palette-green-A700: nth($palette-green, 14);
 
 $palette-light-green:
-"#ebf5e0"
-"#c4e2a7"
-"#a8d47d"
-"#85c247"
-"#75b03b"
-"#669933"
-"#57822b"
-"#476b24"
-"#38541c"
-"#293d14"
-"#ebf5e0"
-"#c4e2a7"
-"#75b03b"
-"#476b24";
+#ebf5e0,
+#c4e2a7,
+#a8d47d,
+#85c247,
+#75b03b,
+#669933,
+#57822b,
+#476b24,
+#38541c,
+#293d14,
+#ebf5e0,
+#c4e2a7,
+#75b03b,
+#476b24;
 
 $palette-light-green-50: nth($palette-light-green, 1);
 $palette-light-green-100: nth($palette-light-green, 2);
@@ -343,20 +343,20 @@ $palette-light-green-A400: nth($palette-light-green, 13);
 $palette-light-green-A700: nth($palette-light-green, 14);
 
 $palette-lime:
-"#f5f5e0"
-"#e2e2a7"
-"#d4d47d"
-"#c2c247"
-"#b0b03b"
-"#999933"
-"#82822b"
-"#6b6b24"
-"#54541c"
-"#3d3d14"
-"#f5f5e0"
-"#e2e2a7"
-"#b0b03b"
-"#6b6b24";
+#f5f5e0,
+#e2e2a7,
+#d4d47d,
+#c2c247,
+#b0b03b,
+#999933,
+#82822b,
+#6b6b24,
+#54541c,
+#3d3d14,
+#f5f5e0,
+#e2e2a7,
+#b0b03b,
+#6b6b24;
 
 $palette-lime-50: nth($palette-lime, 1);
 $palette-lime-100: nth($palette-lime, 2);
@@ -374,20 +374,20 @@ $palette-lime-A400: nth($palette-lime, 13);
 $palette-lime-A700: nth($palette-lime, 14);
 
 $palette-yellow:
-"#ffffff"
-"#f2f2ca"
-"#e7e79d"
-"#d8d864"
-"#d2d24b"
-"#cccc33"
-"#b4b42d"
-"#9b9b27"
-"#838321"
-"#6a6a1b"
-"#ffffff"
-"#f2f2ca"
-"#d2d24b"
-"#9b9b27";
+#ffffff,
+#f2f2ca,
+#e7e79d,
+#d8d864,
+#d2d24b,
+#cccc33,
+#b4b42d,
+#9b9b27,
+#838321,
+#6a6a1b,
+#ffffff,
+#f2f2ca,
+#d2d24b,
+#9b9b27;
 
 $palette-yellow-50: nth($palette-yellow, 1);
 $palette-yellow-100: nth($palette-yellow, 2);
@@ -405,20 +405,20 @@ $palette-yellow-A400: nth($palette-yellow, 13);
 $palette-yellow-A700: nth($palette-yellow, 14);
 
 $palette-amber:
-"#fff5d6"
-"#ffe28a"
-"#ffd452"
-"#ffc20a"
-"#ebb000"
-"#cc9900"
-"#ad8200"
-"#8f6b00"
-"#705400"
-"#523d00"
-"#fff5d6"
-"#ffe28a"
-"#ebb000"
-"#8f6b00";
+#fff5d6,
+#ffe28a,
+#ffd452,
+#ffc20a,
+#ebb000,
+#cc9900,
+#ad8200,
+#8f6b00,
+#705400,
+#523d00,
+#fff5d6,
+#ffe28a,
+#ebb000,
+#8f6b00;
 
 $palette-amber-50: nth($palette-amber, 1);
 $palette-amber-100: nth($palette-amber, 2);
@@ -436,20 +436,20 @@ $palette-amber-A400: nth($palette-amber, 13);
 $palette-amber-A700: nth($palette-amber, 14);
 
 $palette-orange:
-"#ffebd6"
-"#ffc48a"
-"#ffa852"
-"#ff850a"
-"#eb7500"
-"#cc6600"
-"#ad5700"
-"#8f4700"
-"#703800"
-"#522900"
-"#ffebd6"
-"#ffc48a"
-"#eb7500"
-"#8f4700";
+#ffebd6,
+#ffc48a,
+#ffa852,
+#ff850a,
+#eb7500,
+#cc6600,
+#ad5700,
+#8f4700,
+#703800,
+#522900,
+#ffebd6,
+#ffc48a,
+#eb7500,
+#8f4700;
 
 $palette-orange-50: nth($palette-orange, 1);
 $palette-orange-100: nth($palette-orange, 2);
@@ -467,20 +467,20 @@ $palette-orange-A400: nth($palette-orange, 13);
 $palette-orange-A700: nth($palette-orange, 14);
 
 $palette-deep-orange:
-"#ffffff"
-"#f2caca"
-"#e79d9d"
-"#d86464"
-"#d24b4b"
-"#cc3333"
-"#b42d2d"
-"#9b2727"
-"#832121"
-"#6a1b1b"
-"#ffffff"
-"#f2caca"
-"#d24b4b"
-"#9b2727";
+#ffffff,
+#f2caca,
+#e79d9d,
+#d86464,
+#d24b4b,
+#cc3333,
+#b42d2d,
+#9b2727,
+#832121,
+#6a1b1b,
+#ffffff,
+#f2caca,
+#d24b4b,
+#9b2727;
 
 $palette-deep-orange-50: nth($palette-deep-orange, 1);
 $palette-deep-orange-100: nth($palette-deep-orange, 2);
@@ -501,16 +501,16 @@ $palette-deep-orange-A700: nth($palette-deep-orange, 14);
 // Color order: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900.
 
 $palette-brown:
-"239,235,233"
-"215,204,200"
-"188,170,164"
-"161,136,127"
-"141,110,99"
-"121,85,72"
-"109,76,65"
-"93,64,55"
-"78,52,46"
-"62,39,35";
+#efebe9,
+#d7ccc8,
+#bcaaa4,
+#a1887f,
+#8d6e63,
+#795548,
+#6d4c41,
+#5d4037,
+#4e342e,
+#3e2723;
 
 $palette-brown-50: nth($palette-brown, 1);
 $palette-brown-100: nth($palette-brown, 2);
@@ -524,16 +524,16 @@ $palette-brown-800: nth($palette-brown, 9);
 $palette-brown-900: nth($palette-brown, 10);
 
 $palette-gray:
-"#ffffff"
-"#fcfcfc"
-"#e0e0e0"
-"#bdbdbd"
-"#adadad"
-"#9e9e9e"
-"#8f8f8f"
-"#7f7f7f"
-"#707070"
-"#616161";
+#ffffff,
+#fcfcfc,
+#e0e0e0,
+#bdbdbd,
+#adadad,
+#9e9e9e,
+#8f8f8f,
+#7f7f7f,
+#707070,
+#616161;
 
 $palette-gray-50: nth($palette-gray, 1);
 $palette-gray-100: nth($palette-gray, 2);
@@ -547,16 +547,16 @@ $palette-gray-800: nth($palette-gray, 9);
 $palette-gray-900: nth($palette-gray, 10);
 
 $palette-blue-gray:
-"#ffffff"
-"#d7d7e4"
-"#b6b6ce"
-"#8b8bb1"
-"#7878a5"
-"#666699"
-"#5a5a87"
-"#4e4e74"
-"#414162"
-"#353550";
+#ffffff,
+#d7d7e4,
+#b6b6ce,
+#8b8bb1,
+#7878a5,
+#666699,
+#5a5a87,
+#4e4e74,
+#414162,
+#353550;
 
 $palette-blue-gray-50: nth($palette-blue-gray, 1);
 $palette-blue-gray-100: nth($palette-blue-gray, 2);
@@ -579,21 +579,34 @@ $color-dark-contrast: $white !default;
 $color-light-contrast: $black !default;
 
 // From TWBS
-$gray-dark:                 #616161 !default;
-$gray:                      #9e9e9e !default;
-$gray-light:                #adadad !default;
-$gray-lighter:              #bdbdbd !default;
-$gray-lightest:             #fcfcfc !default;
+$gray-dark:                 $palette-gray-900 !default;
+$gray:                      $palette-gray-500 !default;
+$gray-light:                $palette-gray-400 !default;
+$gray-lighter:              $palette-gray-300 !default;
+$gray-lightest:             $palette-gray-100 !default;
 
-$brand-primary:             #663399 !default;
-$brand-secondary:           #eb7500 !default;
-$brand-success:             #339933 !default;
-$brand-info:                #218be1 !default;
-$brand-warning:             #eb7500 !default;
-$brand-danger:              #cc3333 !default;
+$brand-primary: $palette-blue-500!default;
+$brand-secondary: $palette-light-green-300 !default;
+$brand-tertiary: $palette-orange-A400 !default;
+$brand-success: $palette-green-500 !default;
+$brand-info: $palette-blue-A400 !default;
+$brand-warning: $palette-orange-A400 !default;
+$brand-danger: $palette-deep-orange-500 !default;
 
-$background-color: $white;
+$background-color: lighten($palette-gray-200, 10);
 $text-color      : $gray-dark;
 $text-color-dark : $gray;
 $text-color-light: $white;
-$link-color      : unquote("rgba(#{$palette-orange-A200}, 0.87)") !default;
+$link-color      : rgba($palette-orange-A200, 0.87) !default;
+
+$palette-categories:
+$palette-pink-A400,
+$palette-purple-A400,
+$palette-indigo-A400,
+$palette-cyan-A400,
+$palette-teal-A400,
+$palette-green-A400,
+$palette-lime-A400,
+$palette-yellow-A700,
+$palette-amber-A400,
+$palette-orange-A400;

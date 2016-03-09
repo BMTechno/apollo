@@ -82,7 +82,7 @@ $border-width: 1px !default;
 //
 // Settings for the `<body>` element.
 
-$body-bg:    #fff !default;
+$body-bg:    $background-color !default;
 $body-color: $gray-dark !default;
 
 
@@ -129,7 +129,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:      12 !default;
-$grid-gutter-width: 16px !default;
+$grid-gutter-width: .5rem !default;
 
 
 // Typography

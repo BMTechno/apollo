@@ -2,14 +2,15 @@
 /* ------ {{ apollo:base v0.0.0 }} ------ */
 /* ------ {{ sirna:function v1.3.0 }} ------ */
 /* ------ {{ sirna:mixin v1.3.0 }} ------ */
+/* ------ {{ hugo:function }} ------ */
 /* ------ {{ twbs v4-alpha }} ------ */
 /* ------ {{ apollo:base:font v0.0.0 }} ------ */
 /* ------ {{ apollo:component v0.0.0 }} ------ */
 .main-header {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .main-header::after {
@@ -55,7 +56,7 @@
   -ms-transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  background-color: #663399;
+  background-color: #1b7bc8;
 }
 
 .main-header .header__bar-primary {
@@ -81,7 +82,6 @@
   width: 100%;
   max-height: 2rem;
   height: 2rem;
-  overflow: hidden;
   padding: 0 0 0 4rem;
 }
 
@@ -159,7 +159,7 @@
 
 #header__slogan .text {
   margin: 0;
-  color: #eb7500;
+  color: #FFF;
   font-size: 9px;
   line-height: 2rem;
   text-align: center;
@@ -230,7 +230,7 @@
 }
 
 #header__secondary-action-group .btn-login-secondary .icon {
-  color: #3bb03b;
+  color: #d2d24b;
 }
 
 #main-footer {
@@ -249,8 +249,8 @@
 #main-footer .main-footer__group {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 #main-footer .main-footer__group::after {
@@ -284,8 +284,8 @@
 }
 
 #main-footer .main-footer__row {
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 2rem 0;
   margin: 0;
 }
@@ -379,8 +379,8 @@
 .main-content {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
   padding: 1rem 0;
 }
 
@@ -445,8 +445,8 @@
 }
 
 .cat-l1-row {
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   margin: 0 0 1rem 0;
   min-height: 100vh;
 }
@@ -460,20 +460,21 @@
 .cat-l1 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 100%;
-  margin: 8px 0 0 0;
+  margin: .5rem 0 0 0;
   overflow: hidden;
+  padding: 0 .25rem;
 }
 
 @media (min-width: 544px) {
   .cat-l1 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 50%;
   }
@@ -483,8 +484,8 @@
   .cat-l1 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 33.33333%;
   }
@@ -495,9 +496,9 @@
   position: relative;
   max-width: 100%;
   width: 100%;
-  max-height: 6rem;
-  height: 6rem;
-  color: #707070;
+  max-height: 3rem;
+  height: 3rem;
+  color: #616161;
   background-color: #FFF;
   overflow: hidden;
 }
@@ -508,41 +509,15 @@
   clear: both;
 }
 
-@media (max-width: 991px) {
-  .cat-l1__item {
-    max-height: 4rem;
-    height: 4rem;
-  }
-}
-
-.cat-l1__item:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border: 1px solid #663399;
-}
-
 .cat-l1__item .item__icon {
   display: block;
   float: left;
   position: relative;
-  width: 6rem;
-  height: 6rem;
-  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+  padding: .25rem;
   text-decoration: none;
-  background-color: #8547c2;
-}
-
-@media (max-width: 991px) {
-  .cat-l1__item .item__icon {
-    width: 4rem;
-    height: 4rem;
-  }
+  background-color: #1b7bc8;
 }
 
 .cat-l1__item .item__icon .item__svg {
@@ -554,18 +529,25 @@
   float: left;
   display: table;
   position: relative;
-  max-width: calc( 100% - 6rem);
-  height: 6rem;
+  max-width: calc( 100% - 3rem);
+  width: calc( 100% - 3rem);
+  height: 3rem;
   padding: 0 16px;
   color: inherit;
   text-decoration: none;
 }
 
-@media (max-width: 991px) {
-  .cat-l1__item .item__name {
-    max-height: 4rem;
-    height: 4rem;
-  }
+.cat-l1__item .item__name:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-left: none;
 }
 
 .cat-l1__item .item__name .name__text {
@@ -576,8 +558,47 @@
   font-weight: 300;
   line-height: 24px;
   font-size: 20px;
-  letter-spacing: -0.03em;
   pointer-events: none;
+}
+
+.cat-l1:nth-child(1) .item__icon {
+  background-color: #eb0075;
+}
+
+.cat-l1:nth-child(2) .item__icon {
+  background-color: #753bb0;
+}
+
+.cat-l1:nth-child(3) .item__icon {
+  background-color: #3b3bb0;
+}
+
+.cat-l1:nth-child(4) .item__icon {
+  background-color: #00b1c8;
+}
+
+.cat-l1:nth-child(5) .item__icon {
+  background-color: #008a7d;
+}
+
+.cat-l1:nth-child(6) .item__icon {
+  background-color: #3bb03b;
+}
+
+.cat-l1:nth-child(7) .item__icon {
+  background-color: #b0b03b;
+}
+
+.cat-l1:nth-child(8) .item__icon {
+  background-color: #9b9b27;
+}
+
+.cat-l1:nth-child(9) .item__icon {
+  background-color: #ebb000;
+}
+
+.cat-l1:nth-child(10) .item__icon {
+  background-color: #eb7500;
 }
 
 body.is-preloading .cat-l1__item {
@@ -697,7 +718,7 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 
 @media (min-width: 768px) {
   .cat-l1.is-active {
-    width: calc(100% - 224px) !important;
+    width: calc(100% - 112px) !important;
   }
 }
 
@@ -707,21 +728,15 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   }
 }
 
-.cat-l1.is-active .cat-l1__item .item__icon {
-  background-color: #eb7500;
-}
-
-.cat-l1.is-active .cat-l1__item:after {
-  border-color: #eb7500;
-}
-
 .cat-l1.is-active .cat-l2-group {
+  margin: .5rem 0;
   overflow: auto;
 }
 
 @media (max-width: 991px) {
   .cat-l1.is-active .cat-l2-group {
     max-height: 9999px;
+    margin: .5rem -.25rem 0;
   }
 }
 
@@ -733,11 +748,52 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
     -o-transition: max-height 0.5s linear;
     transition: max-height 0.5s linear;
     max-height: 480px;
+    margin: .5rem -.25rem;
   }
 }
 
+.cat-l1.is-active:nth-child(1) .item__icon {
+  background-color: #b8005c;
+}
+
+.cat-l1.is-active:nth-child(2) .item__icon {
+  background-color: #5c2e8a;
+}
+
+.cat-l1.is-active:nth-child(3) .item__icon {
+  background-color: #2e2e8a;
+}
+
+.cat-l1.is-active:nth-child(4) .item__icon {
+  background-color: #008495;
+}
+
+.cat-l1.is-active:nth-child(5) .item__icon {
+  background-color: #00574f;
+}
+
+.cat-l1.is-active:nth-child(6) .item__icon {
+  background-color: #2e8a2e;
+}
+
+.cat-l1.is-active:nth-child(7) .item__icon {
+  background-color: #8a8a2e;
+}
+
+.cat-l1.is-active:nth-child(8) .item__icon {
+  background-color: #72721d;
+}
+
+.cat-l1.is-active:nth-child(9) .item__icon {
+  background-color: #b88a00;
+}
+
+.cat-l1.is-active:nth-child(10) .item__icon {
+  background-color: #b85c00;
+}
+
 .cat-l1.is-inactive {
-  width: 7rem !important;
+  width: 3.5rem !important;
 }
 
 .cat-l1.is-inactive .item__name {
@@ -755,7 +811,7 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 .cat-l2-group {
   max-height: 0;
   overflow: hidden;
-  margin: 4px 0 0 0;
+  margin: 0;
 }
 
 .cat-l2 {
@@ -772,10 +828,6 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   text-decoration: none;
 }
 
-.cat-l2__item:hover {
-  text-decoration: none;
-}
-
 .cat-l2__item p {
   margin: 0;
 }
@@ -784,11 +836,12 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   position: relative;
   padding: .5rem;
   height: 4rem;
+  background-color: #FFF;
 }
 
 @media (max-width: 991px) {
   .cat-l2__item > .inner {
-    height: 5.5rem;
+    height: 5rem;
   }
 }
 
@@ -801,18 +854,22 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   left: 0;
   height: 100%;
   width: 100%;
-  border: 1px solid #663399;
+  border: 1px solid #e0e0e0;
 }
 
-.cat-l2__item > .inner:after {
-  border-color: #adadad;
+.cat-l2__item:hover {
+  text-decoration: none;
+}
+
+.cat-l2__item:hover > .inner:after {
+  border: 1px solid #9e9e9e;
 }
 
 .cat-l2__item .oneweb-catitem-l2__name {
   font-size: 14px;
   width: 100%;
   margin: 0;
-  color: #707070;
+  color: #616161;
 }
 
 @media (max-width: 543px) {
@@ -835,22 +892,33 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   border-radius: 1px;
   max-height: 1rem;
   height: 1rem;
+  border: none;
 }
 
 @media (max-width: 991px) {
   .cat-l2__item .badge-count > .inner {
     text-align: left;
-    background-color: transparent;
+    background-color: #FFF;
+    border-top: 1px solid #e0e0e0;
+    max-height: 1.5rem;
+    height: 1.5rem;
   }
 }
 
 .cat-l2__item .badge-count .text {
-  margin: 0 4px;
+  margin: 0;
   color: #000;
   letter-spacing: .05em;
   font-size: 10px;
   line-height: 16px;
   font-weight: 200;
+}
+
+@media (max-width: 991px) {
+  .cat-l2__item .badge-count .text {
+    height: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
 
 .cat-l2__item .badge-count .text > span {
@@ -863,12 +931,14 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 @media (max-width: 767px) {
   .cat-l2__item .badge-count .text > span {
     padding: 2px 0 0 0;
+    height: 1.5rem;
+    line-height: 1.5rem;
   }
 }
 
 .ad-listing__row {
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   margin: 0 0 1rem 0;
 }
 
@@ -881,8 +951,8 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 .ad-listing {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 100%;
   position: relative;
@@ -894,8 +964,8 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   .ad-listing {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 100%;
   }
@@ -905,8 +975,8 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   .ad-listing {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 25%;
   }
@@ -1046,8 +1116,8 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 }
 
 .ad-detail__row {
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   margin: 0 0 1rem 0;
 }
 
@@ -1066,8 +1136,8 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 .detail-secondary {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 100%;
   position: relative;
@@ -1079,8 +1149,8 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   .detail-secondary {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 25%;
   }
@@ -1225,9 +1295,9 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   color: #FFF;
   height: 2rem;
   line-height: 2rem;
-  background-color: #572b82;
+  background-color: #fcfcfc;
   border: none;
-  box-shadow: inset 0px -1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -1px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 #main-search__form .btn-head-location {
@@ -1252,26 +1322,26 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   font-size: 10px;
   transition: all 0.2s ease-in-out;
   color: #fff;
-  background-color: #916cd1;
+  background-color: #85c247;
   border-color: transparent;
 }
 
 #main-search__form .btn-head-location:hover {
   color: #fff;
-  background-color: #7445c5;
+  background-color: #6ba135;
   border-color: transparent;
 }
 
 #main-search__form .btn-head-location:focus, #main-search__form .btn-head-location.focus {
   color: #fff;
-  background-color: #7445c5;
+  background-color: #6ba135;
   border-color: transparent;
 }
 
 #main-search__form .btn-head-location:active, #main-search__form .btn-head-location.active,
 .open > #main-search__form .btn-head-location.dropdown-toggle {
   color: #fff;
-  background-color: #7445c5;
+  background-color: #6ba135;
   border-color: transparent;
   background-image: none;
 }
@@ -1281,17 +1351,17 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 .open > #main-search__form .btn-head-location.dropdown-toggle:focus,
 .open > #main-search__form .btn-head-location.dropdown-toggle.focus {
   color: #fff;
-  background-color: #6337af;
+  background-color: #5a862c;
   border-color: transparent;
 }
 
 #main-search__form .btn-head-location.disabled:focus, #main-search__form .btn-head-location.disabled.focus, #main-search__form .btn-head-location:disabled:focus, #main-search__form .btn-head-location:disabled.focus {
-  background-color: #916cd1;
+  background-color: #85c247;
   border-color: transparent;
 }
 
 #main-search__form .btn-head-location.disabled:hover, #main-search__form .btn-head-location:disabled:hover {
-  background-color: #916cd1;
+  background-color: #85c247;
   border-color: transparent;
 }
 
@@ -1332,26 +1402,26 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
   font-size: 14px;
   transition: all 0.2s ease-in-out;
   color: #fff;
-  background-color: #916cd1;
+  background-color: #85c247;
   border-color: transparent;
 }
 
 #main-search__form .btn-submit-search:hover {
   color: #fff;
-  background-color: #7445c5;
+  background-color: #6ba135;
   border-color: transparent;
 }
 
 #main-search__form .btn-submit-search:focus, #main-search__form .btn-submit-search.focus {
   color: #fff;
-  background-color: #7445c5;
+  background-color: #6ba135;
   border-color: transparent;
 }
 
 #main-search__form .btn-submit-search:active, #main-search__form .btn-submit-search.active,
 .open > #main-search__form .btn-submit-search.dropdown-toggle {
   color: #fff;
-  background-color: #7445c5;
+  background-color: #6ba135;
   border-color: transparent;
   background-image: none;
 }
@@ -1361,17 +1431,17 @@ body:not(.is-preloading) .cat-l1:nth-child(21) .cat-l1__item {
 .open > #main-search__form .btn-submit-search.dropdown-toggle:focus,
 .open > #main-search__form .btn-submit-search.dropdown-toggle.focus {
   color: #fff;
-  background-color: #6337af;
+  background-color: #5a862c;
   border-color: transparent;
 }
 
 #main-search__form .btn-submit-search.disabled:focus, #main-search__form .btn-submit-search.disabled.focus, #main-search__form .btn-submit-search:disabled:focus, #main-search__form .btn-submit-search:disabled.focus {
-  background-color: #916cd1;
+  background-color: #85c247;
   border-color: transparent;
 }
 
 #main-search__form .btn-submit-search.disabled:hover, #main-search__form .btn-submit-search:disabled:hover {
-  background-color: #916cd1;
+  background-color: #85c247;
   border-color: transparent;
 }
 
@@ -1620,7 +1690,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #616161;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 
 [tabindex="-1"]:focus {
@@ -1677,7 +1747,7 @@ blockquote {
 }
 
 a {
-  color: rgba(#ffc48a, 0.87);
+  color: rgba(255, 196, 138, 0.87);
   text-decoration: none;
 }
 
@@ -1791,8 +1861,8 @@ output {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .container::after {
@@ -1828,8 +1898,8 @@ output {
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .container-fluid::after {
@@ -1839,8 +1909,8 @@ output {
 }
 
 .row {
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
 }
 
 .row::after {
@@ -1852,8 +1922,8 @@ output {
 .col-xs-1 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 8.33333%;
 }
@@ -1861,8 +1931,8 @@ output {
 .col-xs-2 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 16.66667%;
 }
@@ -1870,8 +1940,8 @@ output {
 .col-xs-3 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 25%;
 }
@@ -1879,8 +1949,8 @@ output {
 .col-xs-4 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 33.33333%;
 }
@@ -1888,8 +1958,8 @@ output {
 .col-xs-5 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 41.66667%;
 }
@@ -1897,8 +1967,8 @@ output {
 .col-xs-6 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 50%;
 }
@@ -1906,8 +1976,8 @@ output {
 .col-xs-7 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 58.33333%;
 }
@@ -1915,8 +1985,8 @@ output {
 .col-xs-8 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 66.66667%;
 }
@@ -1924,8 +1994,8 @@ output {
 .col-xs-9 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 75%;
 }
@@ -1933,8 +2003,8 @@ output {
 .col-xs-10 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 83.33333%;
 }
@@ -1942,8 +2012,8 @@ output {
 .col-xs-11 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 91.66667%;
 }
@@ -1951,8 +2021,8 @@ output {
 .col-xs-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   float: left;
   width: 100%;
 }
@@ -2109,96 +2179,96 @@ output {
   .col-sm-1 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 8.33333%;
   }
   .col-sm-2 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 16.66667%;
   }
   .col-sm-3 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 25%;
   }
   .col-sm-4 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 33.33333%;
   }
   .col-sm-5 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 41.66667%;
   }
   .col-sm-6 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 50%;
   }
   .col-sm-7 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 58.33333%;
   }
   .col-sm-8 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 66.66667%;
   }
   .col-sm-9 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 75%;
   }
   .col-sm-10 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 83.33333%;
   }
   .col-sm-11 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 91.66667%;
   }
   .col-sm-12 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 100%;
   }
@@ -2322,96 +2392,96 @@ output {
   .col-md-1 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 8.33333%;
   }
   .col-md-2 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 16.66667%;
   }
   .col-md-3 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 25%;
   }
   .col-md-4 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 33.33333%;
   }
   .col-md-5 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 41.66667%;
   }
   .col-md-6 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 50%;
   }
   .col-md-7 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 58.33333%;
   }
   .col-md-8 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 66.66667%;
   }
   .col-md-9 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 75%;
   }
   .col-md-10 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 83.33333%;
   }
   .col-md-11 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 91.66667%;
   }
   .col-md-12 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 100%;
   }
@@ -2535,96 +2605,96 @@ output {
   .col-lg-1 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 8.33333%;
   }
   .col-lg-2 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 16.66667%;
   }
   .col-lg-3 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 25%;
   }
   .col-lg-4 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 33.33333%;
   }
   .col-lg-5 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 41.66667%;
   }
   .col-lg-6 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 50%;
   }
   .col-lg-7 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 58.33333%;
   }
   .col-lg-8 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 66.66667%;
   }
   .col-lg-9 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 75%;
   }
   .col-lg-10 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 83.33333%;
   }
   .col-lg-11 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 91.66667%;
   }
   .col-lg-12 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 100%;
   }
@@ -2748,96 +2818,96 @@ output {
   .col-xl-1 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 8.33333%;
   }
   .col-xl-2 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 16.66667%;
   }
   .col-xl-3 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 25%;
   }
   .col-xl-4 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 33.33333%;
   }
   .col-xl-5 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 41.66667%;
   }
   .col-xl-6 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 50%;
   }
   .col-xl-7 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 58.33333%;
   }
   .col-xl-8 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 66.66667%;
   }
   .col-xl-9 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 75%;
   }
   .col-xl-10 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 83.33333%;
   }
   .col-xl-11 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 91.66667%;
   }
   .col-xl-12 {
     position: relative;
     min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     float: left;
     width: 100%;
   }
@@ -3108,7 +3178,7 @@ dl.row > dd + dt {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
+  background-color: #fafafa;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
   transition: all .2s ease-in-out;
@@ -3158,7 +3228,7 @@ dl.row > dd + dt {
 }
 
 .table .table {
-  background-color: #fff;
+  background-color: #fafafa;
 }
 
 .table-sm th,
@@ -4263,7 +4333,7 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: normal;
-  color: rgba(#ffc48a, 0.87);
+  color: rgba(255, 196, 138, 0.87);
   border-radius: 0;
 }
 
@@ -4416,7 +4486,7 @@ input[type="button"].btn-block {
 .dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #663399;
+  background-color: #1b7bc8;
   outline: 0;
 }
 
@@ -4973,7 +5043,7 @@ input[type="button"].btn-block {
 .nav-tabs .nav-item.open .nav-link:focus,
 .nav-tabs .nav-item.open .nav-link:hover {
   color: #9e9e9e;
-  background-color: #fff;
+  background-color: #fafafa;
   border-color: #ddd #ddd transparent;
 }
 
@@ -5006,7 +5076,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-item.open .nav-link:hover {
   color: #fff;
   cursor: default;
-  background-color: #663399;
+  background-color: #1b7bc8;
 }
 
 .nav-stacked .nav-item {
@@ -5289,8 +5359,8 @@ input[type="button"].btn-block {
 }
 
 .card-primary {
-  background-color: #663399;
-  border-color: #663399;
+  background-color: #1b7bc8;
+  border-color: #1b7bc8;
 }
 
 .card-success {
@@ -5480,8 +5550,8 @@ input[type="button"].btn-block {
   z-index: 2;
   color: #fff;
   cursor: default;
-  background-color: #663399;
-  border-color: #663399;
+  background-color: #1b7bc8;
+  border-color: #1b7bc8;
 }
 
 .page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover {
@@ -5497,7 +5567,7 @@ input[type="button"].btn-block {
   float: left;
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
-  color: rgba(#ffc48a, 0.87);
+  color: rgba(255, 196, 138, 0.87);
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -5959,8 +6029,8 @@ base::-moz-progress-bar,
   z-index: 2;
   color: #fff;
   text-decoration: none;
-  background-color: #663399;
-  border-color: #663399;
+  background-color: #1b7bc8;
+  border-color: #1b7bc8;
 }
 
 .list-group-item.active .list-group-item-heading,
@@ -5974,7 +6044,7 @@ base::-moz-progress-bar,
 }
 
 .list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text {
-  color: lighten(#663399, 40%);
+  color: lighten(#1b7bc8, 40%);
 }
 
 .list-group-flush .list-group-item {
@@ -6779,11 +6849,11 @@ button.close {
 
 .bg-primary {
   color: #fff !important;
-  background-color: #663399 !important;
+  background-color: #1b7bc8 !important;
 }
 
 a.bg-primary:focus, a.bg-primary:hover {
-  background-color: #4d2673 !important;
+  background-color: #155f9b !important;
 }
 
 .bg-success {
@@ -7268,11 +7338,11 @@ a.text-muted:focus, a.text-muted:hover {
 }
 
 .text-primary {
-  color: #663399 !important;
+  color: #1b7bc8 !important;
 }
 
 a.text-primary:focus, a.text-primary:hover {
-  color: #4d2673;
+  color: #155f9b;
 }
 
 .text-success {

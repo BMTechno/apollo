@@ -154,8 +154,9 @@
 	            }
 	        },
 	        js_cathash: {
+	            // href: function( params ) { return '#catitem__' + this.code; },
 	            href: function href(params) {
-	                return '#catitem__' + this.code;
+	                return '#';
 	            },
 	            id: function id(params) {
 	                return 'catitem__' + this.code;

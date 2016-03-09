@@ -23,8 +23,11 @@ $old: false;
 @import "vendor/sirna/mixin/sirna-animate";
 @import "vendor/sirna/mixin/sirna-rwd";
 
+/* ------ {{ hugo:function }} ------ */
+@import "vendor/hugo/function/hugo-to-number";
+
 /* ------ {{ twbs v4-alpha }} ------ */
-@import "vendor/twbs/variables";
+@import "vendor/twbs/bootstrap-variables";
 @import "vendor/twbs/mixins";
 
 /* ------ {{ apollo:base:font v0.0.0 }} ------ */
