@@ -5,11 +5,12 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-export function init() {
+export function init( ns, endpoint, proxy ) {
+
     $.mockjax(
         {
-            url: 'api/v1/categories',
-            proxy: 'mock/res/categories.json'
+            url: ns + '/' + endpoint,
+            proxy: proxy
         }
     );
 }
