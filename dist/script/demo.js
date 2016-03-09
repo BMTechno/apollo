@@ -53,7 +53,7 @@
 
 	(function (_self, $) {
 
-	    var mock = __webpack_require__(2);
+	    var mock = __webpack_require__(3);
 
 	    $(function () {
 	        // Mock API
@@ -65,7 +65,8 @@
 
 /***/ },
 /* 1 */,
-/* 2 */
+/* 2 */,
+/* 3 */
 /***/ function(module, exports) {
 
 	'use strict';

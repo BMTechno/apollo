@@ -3,14 +3,7 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-export function handleL1Click() {
-    $('body').on( 'click', '.cat-l1__item', function(e) {
-        e.preventDefault();
-        Category.toggleActive( $(this) );
-    });
-}
-
-export function toggleActive( $el ) {
+function _toggleActive( $el ) {
     var $parent = $el.parent()
     ,   $siblings = $parent.siblings()
     ,   $prev = $parent.prev()
@@ -41,4 +34,12 @@ export function toggleActive( $el ) {
         $parent.removeClass('is-active');
         $siblings.removeClass('is-inactive');
     }
+}
+
+export function handleL1Click( selector ) {
+
+    $(document).on( 'click', selector, function(e) {
+        e.preventDefault();
+        _toggleActive( $(this) );
+    });
 }
