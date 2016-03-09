@@ -71,15 +71,28 @@
     display: block;
 
     float: left;
-
     margin: 0;
-    padding: .5rem;
-    min-height: 100%;
-    min-width: $logo-size;
     max-height: 100%;
-    max-width: $logo-size;
     height: 100%;
-    width: $logo-size;
+    overflow: hidden;
+
+    padding: 0;
+    max-width: $logo-size + 2rem;
+    width: $logo-size + 2rem;
+    @include media-breakpoint-down(md) {
+        padding: .5rem;
+        max-width: $logo-size;
+        width: $logo-size;
+    }
+
+    & > .logo__svg {
+        position: relative;
+        top: -1rem;
+
+        @include media-breakpoint-down(md) {
+            top: 0;
+        }
+    }
 }
 
 #header__slogan {
