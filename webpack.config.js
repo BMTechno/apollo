@@ -17,11 +17,19 @@ var webpackConfig = {
         path: path.resolve( __dirname, './dist/script/' ),
         filename: '[name].js'
     },
-    module: {},
-    resolve: {
-        alias: {}
-    },
-    plugins: []
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                query: {
+                    cacheDirectory: true,
+                    presets: ['es2015']
+                }
+            }
+        ],
+    }
 };
 
 module.exports = webpackConfig;

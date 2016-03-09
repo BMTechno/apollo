@@ -41,7 +41,8 @@ var dev = {
     /* webpack */
     webpack: {
         input: {
-            input: input + '/script/main',
+            all: input + '/script', /* Used for watch task */
+            main: input + '/script/main',
             demo: input + '/script/demo'
         },
         output: output + '/script'

@@ -9,7 +9,7 @@ var gulp = require( 'gulp' )
 
 gulp.task( 'watch', [ 'setWatch', 'serve' ], function() {
 
-    gulp.watch( config.webpack.input + '/**/*.js', [ 'webpack' ] );
+    gulp.watch( config.webpack.input.all + '/**/*.js', [ 'webpack' ] );
 
     gulp.watch( config.style.input + '/**/*.scss', [ 'styles' ] );
 

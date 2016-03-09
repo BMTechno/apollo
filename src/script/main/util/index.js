@@ -1,14 +1,12 @@
-var CommonUI = {};
-
-CommonUI.removePreloading = function() {
+export function removePreloading() {
     $('body').removeClass('is-preloading');
-};
+}
 
-CommonUI.toggleActive = function( $el ) {
+export function toggleActive( $el ) {
     $el.toggleClass( 'is-active' );
-};
+}
 
-CommonUI.initStickyHeader = function() {
+export function initStickyHeader() {
 
     var $triggerEl = $('.header__bar-primary')
     ,   $wrapperEl = $('.main-header, .main-content');
@@ -21,26 +19,26 @@ CommonUI.initStickyHeader = function() {
             else if ( direction === 'up' )  $wrapperEl.removeClass( 'is-top' );
         }
     });
-};
+}
 
-CommonUI.keepListingAspectRatio = function() {
+export function keepListingAspectRatio() {
     $('.listing__image-group').keepRatio({ ratio: 1, calculate: 'height' });
-};
+}
 
-CommonUI.keepDetailAspectRatio = function() {
+export function keepDetailAspectRatio() {
     $('.detail-gallery_group').keepRatio({ ratio: 4/3, calculate: 'height' });
-};
+}
 
-CommonUI.formatCurrency = function( $el ) {
+export function formatCurrency( $el ) {
     $el.each( function(i) {
         var _self = $(this)
         ,   _formatted = accounting.formatMoney( _self.text() );
 
         _self.text( _formatted );
     });
-};
+}
 
-CommonUI.imageFillW = function( $el ) {
+export function imageFillW( $el ) {
     $el.each( function(i) {
 
         console.log( $(this) );
@@ -50,5 +48,3 @@ CommonUI.imageFillW = function( $el ) {
         });
     });
 }
-
-module.exports = CommonUI;

@@ -5,4 +5,4 @@
 
 var Transitional = {};
 
-module.exports = Transitional;
+export { Transitional }

@@ -5,4 +5,4 @@
 
 var Location = {};
 
-module.exports = Location;
+export { Location }

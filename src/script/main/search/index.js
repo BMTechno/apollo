@@ -5,4 +5,4 @@
 
 var Search = {};
 
-module.exports = Search;
+export { Search }

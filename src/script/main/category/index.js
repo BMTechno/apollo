@@ -3,18 +3,14 @@
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-var commonUI = require( '../common' );
-
-var Category = {};
-
-Category.handleL1Click = function() {
+export function handleL1Click() {
     $('body').on( 'click', '.cat-l1__item', function(e) {
         e.preventDefault();
         Category.toggleActive( $(this) );
     });
 }
 
-Category.toggleActive = function( $el ) {
+export function toggleActive( $el ) {
     var $parent = $el.parent()
     ,   $siblings = $parent.siblings()
     ,   $prev = $parent.prev()
@@ -46,5 +42,3 @@ Category.toggleActive = function( $el ) {
         $siblings.removeClass('is-inactive');
     }
 }
-
-module.exports = Category;

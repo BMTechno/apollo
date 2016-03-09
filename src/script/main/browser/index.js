@@ -1,14 +1,15 @@
 /** ------------------------------------------------------------------------- *\
  * Browser detection using Modernizr & Detectizr
+ * @depends Detectizr
+ * @depends Modernizr
  * @author Rezki
  ** ------------------------------------------------------------------------- */
 
-var Browser = {};
+export function detect() {
 
-Browser.detect = function() {
+    if (typeof Detectizr !== 'object') return;
+
     var _d = Detectizr.os;
 
     console.log( 'Apollo says:', 'You\'re using ' + _d.name + ' v' + _d.version );
 }
-
-module.exports = Browser;

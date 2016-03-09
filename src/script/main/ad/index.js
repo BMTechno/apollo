@@ -5,4 +5,4 @@
 
 var Ad = {};
 
-module.exports = Ad;
+export { Ad }
