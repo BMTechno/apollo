@@ -1,5 +1,6 @@
-export function removePreloading() {
-    $('body').removeClass('is-preloading');
+export function removePreloading( selector ) {
+    selector = ( typeof selector === 'string' ) ? selector : 'body';
+    $( selector ).removeClass('is-preloading');
 }
 
 export function toggleActive( $el ) {

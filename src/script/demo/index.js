@@ -10,6 +10,7 @@ import * as mock from './mock';
     var api_ns = 'api/v1';
 
     $( () => {
+
         // Feature Detection
         $.apollo.browserDetect();
 
@@ -21,11 +22,15 @@ import * as mock from './mock';
         mock.init( api_ns, 'adverts', 'mock/res/adverts.json' );
         mock.init( api_ns, 'adverts/1', 'mock/res/adverts/1.json' );
 
-        // mock.fetch( 'api/v1/categories' )
-        //     .then( function(res) { console.log(res); });
+        // Mocking GET
+        mock.fetch( 'api/v1/categories' )
+            .then( mock.renderCategories )
+            .then( _handleRenderCategories );
 
-        mock.fetch( 'api/v1/adverts/1' )
-            .then( function(res) { console.log(res); });
+        function _handleRenderCategories( res ) {
+            $.apollo.utilRemovePreloading();
+            $( '.cat-l1__item' ).apollo( 'registerL1Click' );
+        }
     });
 
 } )( jQuery );

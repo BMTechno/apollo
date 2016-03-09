@@ -40,13 +40,14 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _mock = __webpack_require__(3);
+	var _mock = __webpack_require__(5);
 
 	var mock = _interopRequireWildcard(_mock);
 
@@ -57,6 +58,7 @@
 	    var api_ns = 'api/v1';
 
 	    $(function () {
+
 	        // Feature Detection
 	        $.apollo.browserDetect();
 
@@ -68,12 +70,13 @@
 	        mock.init(api_ns, 'adverts', 'mock/res/adverts.json');
 	        mock.init(api_ns, 'adverts/1', 'mock/res/adverts/1.json');
 
-	        // mock.fetch( 'api/v1/categories' )
-	        //     .then( function(res) { console.log(res); });
+	        // Mocking GET
+	        mock.fetch('api/v1/categories').then(mock.renderCategories).then(_handleRenderCategories);
 
-	        mock.fetch('api/v1/adverts/1').then(function (res) {
-	            console.log(res);
-	        });
+	        function _handleRenderCategories(res) {
+	            $.apollo.utilRemovePreloading();
+	            $('.cat-l1__item').apollo('registerL1Click');
+	        }
 	    });
 	})(jQuery); /** ------------------------------------------------------------------------- *\
 	             * Demo.
@@ -81,9 +84,8 @@
 	             ** ------------------------------------------------------------------------- */
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */
+
+/***/ 5:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -112,7 +114,8 @@
 
 	    $.mockjax({
 	        url: ns + '/' + endpoint,
-	        proxy: proxy
+	        proxy: proxy,
+	        responseTime: 2000
 	    });
 	}
 
@@ -179,7 +182,7 @@
 
 	    rendered = Transparency.render($('#js-cat-l1-group')[0], res, _categories);
 
-	    window.setTimeout(function () {
+	    setTimeout(function () {
 	        defer.resolve(rendered);
 	    }, 300);
 
@@ -356,5 +359,6 @@
 	}
 
 /***/ }
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=maps/demo.js.map

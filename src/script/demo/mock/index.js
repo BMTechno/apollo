@@ -10,7 +10,8 @@ export function init( ns, endpoint, proxy ) {
     $.mockjax(
         {
             url: ns + '/' + endpoint,
-            proxy: proxy
+            proxy: proxy,
+            responseTime: 2000
         }
     );
 }
@@ -64,7 +65,7 @@ export function renderCategories( res ) {
 
     rendered = Transparency.render( $('#js-cat-l1-group')[0], res, _categories );
 
-    window.setTimeout( function() { defer.resolve( rendered ); }, 300);
+    setTimeout(function() { defer.resolve( rendered ); }, 300);
 
     return defer.promise();
 }

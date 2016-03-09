@@ -4,8 +4,12 @@
  ** ------------------------------------------------------------------------- */
 
 function _toggleActive( $el ) {
-    var $parent = $el.parent()
-    ,   $siblings = $parent.siblings()
+    var $parent = $el.parents()
+        .filter( function() {
+            return $(this).data('cat') === 'l1';
+        }).eq(0);
+
+    var $siblings = $parent.siblings()
     ,   $prev = $parent.prev()
     ,   $prevFar = $prev.prev()
     ,   $next = $parent.next()
@@ -36,10 +40,16 @@ function _toggleActive( $el ) {
     }
 }
 
-export function registerL1Click( selector ) {
+export function registerL1Click() {
 
-    $(document).on( 'click.l1', selector, function(e) {
+    var $el = ( $(this).length ) ? $(this) : $( '.cat-l1__item' );
+
+    if ( !$el.length ) return;
+
+    $(document).on( 'click', $( '.cat-l1__item' ), function(e) {
         e.preventDefault();
-        _toggleActive( $(this) );
+        _toggleActive( $(e.target) );
     });
+
+    return $el;
 }
