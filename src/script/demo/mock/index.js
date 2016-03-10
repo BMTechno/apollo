@@ -11,7 +11,7 @@ export function init( ns, endpoint, proxy ) {
         {
             url: ns + '/' + endpoint,
             proxy: proxy,
-            responseTime: 2000
+            responseTime: 500
         }
     );
 }

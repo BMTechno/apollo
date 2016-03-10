@@ -133,7 +133,7 @@
 	    $.mockjax({
 	        url: ns + '/' + endpoint,
 	        proxy: proxy,
-	        responseTime: 2000
+	        responseTime: 500
 	    });
 	}
 
