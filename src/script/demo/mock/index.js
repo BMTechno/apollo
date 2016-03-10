@@ -158,7 +158,7 @@ export function renderDetail( res ) {
         }
     };
 
-    rendered = Transparency.render( $('#js-ad-detail-group')[0], res, _advert );
+    rendered = Transparency.render( $('#js-ad-detail-group')[0], res.adverts, _advert );
 
     defer.resolve( rendered );
 

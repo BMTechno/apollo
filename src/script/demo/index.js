@@ -32,6 +32,11 @@ import * as mock from './mock';
             .then( mock.renderListing )
             .then( _handleRenderListing );
 
+        // Mocking GET:adverts
+        mock.fetch( 'api/v1/adverts/1' )
+            .then( mock.renderDetail )
+            .then( _handleRenderDetail );
+
         // Privates
         // --------------------------------------------------------------------
 
@@ -49,6 +54,13 @@ import * as mock from './mock';
                     .apollo( 'keepAspectRatio', { ratio: 1, calculate: 'height' } )
                     .apollo( 'imageFillW' );
             });
+        }
+
+        function _handleRenderDetail( res ) {
+            $('.detail-gallery_group')
+                .apollo( 'utilRemovePreloading' )
+                .apollo( 'keepAspectRatio', { ratio: 4/3, calculate: 'height' } )
+                .apollo( 'imageFillW' );
         }
     });
 

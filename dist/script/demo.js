@@ -76,6 +76,9 @@
 	        // Mocking GET:adverts
 	        mock.fetch('api/v1/adverts').then(mock.renderListing).then(_handleRenderListing);
 
+	        // Mocking GET:adverts
+	        mock.fetch('api/v1/adverts/1').then(mock.renderDetail).then(_handleRenderDetail);
+
 	        // Privates
 	        // --------------------------------------------------------------------
 
@@ -89,6 +92,10 @@
 	            $('.ad-listing').each(function (i) {
 	                $(this).apollo('utilRemovePreloading').find('.listing__image-group').apollo('keepAspectRatio', { ratio: 1, calculate: 'height' }).apollo('imageFillW');
 	            });
+	        }
+
+	        function _handleRenderDetail(res) {
+	            $('.detail-gallery_group').apollo('utilRemovePreloading').apollo('keepAspectRatio', { ratio: 4 / 3, calculate: 'height' }).apollo('imageFillW');
 	        }
 	    });
 	})(jQuery); /** ------------------------------------------------------------------------- *\
@@ -336,7 +343,7 @@
 	        }
 	    };
 
-	    rendered = Transparency.render($('#js-ad-detail-group')[0], res, _advert);
+	    rendered = Transparency.render($('#js-ad-detail-group')[0], res.adverts, _advert);
 
 	    defer.resolve(rendered);
 
